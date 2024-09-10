@@ -1,0 +1,86 @@
+name: PlayerPoints
+version: '@version@'
+authors: [padrewin]
+website: 'https://github/com/padrewin'
+description: A point based currency system
+main: dev.padrewin.playerpoints.PlayerPoints
+api-version: '1.13'
+load: STARTUP
+softdepend: [Vault, Treasury, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
+loadbefore: [mcMMO]
+folia-supported: true
+libraries:
+  - 'com.mysql:mysql-connector-j:9.0.0'
+  - 'org.xerial:sqlite-jdbc:3.46.0.0'
+commands:
+  points:
+    aliases: [p]
+    description: Root command for PlayerPoints
+permissions:
+  playerpoints.*:
+    description: Gives access to all PlayerPoints commands
+    children:
+      playerpoints.give: true
+      playerpoints.giveall: true
+      playerpoints.take: true
+      playerpoints.look: true
+      playerpoints.pay: true
+      playerpoints.set: true
+      playerpoints.reset: true
+      playerpoints.me: true
+      playerpoints.lead: true
+      playerpoints.reload: true
+      playerpoints.broadcast: true
+      playerpoints.export: true
+      playerpoints.import: true
+      playerpoints.convert: true
+      playerpoints.importlegacy: true
+      playerpoints.version: true
+  playerpoints.give:
+    description: Gives access to the give command
+    default: op
+  playerpoints.giveall:
+    description: Gives access to the giveall command
+    default: op
+  playerpoints.take:
+    description: Gives access to the take command
+    default: op
+  playerpoints.look:
+    description: Gives access to the look command
+    default: op
+  playerpoints.pay:
+    description: Gives access to the pay command
+    default: op
+  playerpoints.set:
+    description: Gives access to the set command
+    default: op
+  playerpoints.reset:
+    description: Gives access to the reset command
+    default: op
+  playerpoints.me:
+    description: Gives access to the me command
+    default: op
+  playerpoints.lead:
+    description: Gives access to the lead command
+    default: op
+  playerpoints.reload:
+    description: Gives access to the reload command
+    default: op
+  playerpoints.broadcast:
+    description: Gives access to the broadcast command
+    default: op
+  playerpoints.export:
+    description: Gives access to the export command
+    default: op
+  playerpoints.import:
+    description: Gives access to the import command
+    default: op
+  playerpoints.convert:
+    description: Gives access to the convert command
+    default: op
+  playerpoints.importlegacy:
+    description: Gives access to the importlegacy command
+    default: op
+  playerpoints.version:
+    description: Gives access to the version command
+    default: op
