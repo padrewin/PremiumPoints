@@ -5,8 +5,6 @@ import dev.padrewin.coldplugin.config.ColdSetting;
 import dev.padrewin.coldplugin.manager.Manager;
 import java.util.Arrays;
 import java.util.List;
-import me.lokka30.treasury.api.common.service.ServiceRegistry;
-import me.lokka30.treasury.api.economy.EconomyProvider;
 import net.milkbowl.vault.economy.Economy;
 import dev.padrewin.playerpoints.hook.PointsPlaceholderExpansion;
 import dev.padrewin.playerpoints.listeners.PointsMessageListener;
@@ -16,7 +14,6 @@ import dev.padrewin.playerpoints.manager.DataManager;
 import dev.padrewin.playerpoints.manager.LeaderboardManager;
 import dev.padrewin.playerpoints.manager.LocaleManager;
 import dev.padrewin.playerpoints.setting.SettingKey;
-import dev.padrewin.playerpoints.treasury.PlayerPointsTreasuryLayer;
 import dev.padrewin.playerpoints.util.PointsUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -30,7 +27,6 @@ public class PlayerPoints extends ColdPlugin {
     private static PlayerPoints instance;
     private PlayerPointsAPI api;
     private PlayerPointsVaultLayer vaultLayer;
-    private PlayerPointsTreasuryLayer treasuryLayer;
 
     public PlayerPoints() {
         super(80745, 10234, DataManager.class, LocaleManager.class, null);
@@ -62,27 +58,6 @@ public class PlayerPoints extends ColdPlugin {
             Bukkit.getServicesManager().register(Economy.class, this.vaultLayer, this, priority);
         }
 
-        if (SettingKey.TREASURY.get() && Bukkit.getPluginManager().isPluginEnabled("Treasury")) {
-            this.treasuryLayer = new PlayerPointsTreasuryLayer(this);
-
-            // Check valid values for the priorities
-            me.lokka30.treasury.api.common.service.ServicePriority priority = null;
-            String desiredPriority = SettingKey.TREASURY_PRIORITY.get();
-            for (me.lokka30.treasury.api.common.service.ServicePriority value : me.lokka30.treasury.api.common.service.ServicePriority.values()) {
-                if (value.name().equalsIgnoreCase(desiredPriority)) {
-                    priority = value;
-                    break;
-                }
-            }
-
-            if (priority == null) {
-                this.getLogger().warning("treasury-priority value in the config.yml is invalid, defaulting to LOW.");
-                priority = me.lokka30.treasury.api.common.service.ServicePriority.LOW;
-            }
-
-            ServiceRegistry.INSTANCE.registerService(EconomyProvider.class, new PlayerPointsTreasuryLayer(this), this.getName(), priority);
-        }
-
         if (SettingKey.BUNGEECORD_SEND_UPDATES.get()) {
             Bukkit.getMessenger().registerOutgoingPluginChannel(this, PointsMessageListener.CHANNEL);
             Bukkit.getMessenger().registerIncomingPluginChannel(this, PointsMessageListener.CHANNEL, new PointsMessageListener(this));
@@ -109,9 +84,6 @@ public class PlayerPoints extends ColdPlugin {
     public void disable() {
         if (this.vaultLayer != null)
             Bukkit.getServicesManager().unregister(Economy.class, this.vaultLayer);
-
-        if (this.treasuryLayer != null)
-            ServiceRegistry.INSTANCE.unregister(EconomyProvider.class, this.treasuryLayer);
 
         if (SettingKey.BUNGEECORD_SEND_UPDATES.get()) {
             Bukkit.getMessenger().unregisterOutgoingPluginChannel(this);
@@ -141,12 +113,12 @@ public class PlayerPoints extends ColdPlugin {
     @Override
     protected String[] getColdConfigHeader() {
         return new String[] {
-                "__________ __                           __________       __        __",
-                "\\______   \\  | _____  ___ __  __________\\______   \\____ |__| _____/  |_  ______",
-                " |     ___/  | \\__  \\<   |  |/ __ \\_  __ \\     ___/  _ \\|  |/    \\   __\\/  ___/",
-                " |    |   |  |__/ __ \\\\___  \\  ___/|  | \\/    |  (  <_> )  |   |  \\  |  \\___ \\",
-                " |____|   |____(____  / ____|\\___  >__|  |____|   \\____/|__|___|  /__| /____  >",
-                "                    \\/\\/         \\/                             \\/          \\/"
+                "   ____ ___  _     ____  ",
+                "  / ___/ _ \\| |   |  _ \\ ",
+                " | |  | | | | |   | | | |",
+                " | |__| |_| | |___| |_| |",
+                "  \\____\\___/|_____|____/ ",
+                "                         "
         };
     }
 

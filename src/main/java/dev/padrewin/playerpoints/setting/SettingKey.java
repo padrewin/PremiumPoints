@@ -15,8 +15,6 @@ public class SettingKey {
 
     public static final ColdSetting<Boolean> VAULT = create("vault", BOOLEAN, false, "Should we register with Vault as a currency manager?");
     public static final ColdSetting<String> VAULT_PRIORITY = create("vault-priority", STRING, "Low", "The priority level to use for the Vault hook", "Higher priorities will allow PlayerPoints to load before other economy plugins", "Valid values: [Lowest, Low, Normal, High, Highest]");
-    public static final ColdSetting<Boolean> TREASURY = create("treasury", BOOLEAN, false, "Should we register with Treasury as a currency manager?");
-    public static final ColdSetting<String> TREASURY_PRIORITY = create("treasury-priority", STRING, "LOW", "The priority level to use for the Treasury hook", "Higher priorities will allow PlayerPoints to load before other economy plugins", "Valid values: [LOW, NORMAL, HIGH]");
     public static final ColdSetting<Integer> LEADERBOARD_PER_PAGE = create("leaderboard-per-page", INTEGER, 10, "The number of players to be displayed per page on the leaderboard?");
     public static final ColdSetting<Integer> CACHE_DURATION = create("cache-duration", INTEGER, 30, "The number of seconds to hold a player's points in cache before being released");
     public static final ColdSetting<Boolean> BUNGEECORD_SEND_UPDATES = create("bungeecord-send-updates", BOOLEAN, true, "Should we send updates to other servers when a player's points value changes?", "This should work for any type of proxy");

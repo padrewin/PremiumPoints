@@ -5,24 +5,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.padrewin</groupId>
-    <artifactId>PlayerPoints</artifactId>
+    <artifactId>playerpoints</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>PlayerPoints</name>
 
     <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>com.github.padrewin</id>
+            <url>https://maven.pkg.github.com/padrewin/PlayerPoints</url>
+        </repository>
+    </distributionManagement>
 
     <build>
-        <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -31,7 +38,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -50,6 +57,8 @@
         </resources>
     </build>
 
+
+
     <repositories>
         <repository>
             <id>rosewood-repo</id>
@@ -64,20 +73,8 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
         <repository>
-            <id>codemc-repo</id>
-            <url>https://repo.codemc.org/repository/maven-public</url>
-        </repository>
-        <repository>
-            <id>hc-repo</id>
-            <url>https://nexus.hc.to/content/repositories/pub_releases</url>
-        </repository>
-        <repository>
             <id>placeholderapi-repo</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
-        </repository>
-        <repository>
-            <id>dakanilabs-repo</id>
-            <url>https://repo.dakanilabs.com/repository/public</url>
         </repository>
         <repository>
             <id>central</id>
@@ -94,8 +91,6 @@
             <groupId>dev.padrewin</groupId>
             <artifactId>coldplugin</artifactId>
             <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/coldplugin.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -107,12 +102,6 @@
             <groupId>com.github.milkbowl</groupId>
             <artifactId>vault</artifactId>
             <version>1.7.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>me.lokka30</groupId>
-            <artifactId>treasury-api</artifactId>
-            <version>1.2.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -152,12 +141,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/padrewin/PlayerPoints</url>
-        </repository>
-    </distributionManagement>
 
 </project>

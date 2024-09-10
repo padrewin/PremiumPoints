@@ -4,11 +4,11 @@ authors: [padrewin]
 website: 'https://github/com/padrewin'
 description: A point based currency system
 main: dev.padrewin.playerpoints.PlayerPoints
-api-version: '1.13'
+api-version: '1.20'
 load: STARTUP
-softdepend: [Vault, Treasury, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
+softdepend: [Vault, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
 loadbefore: [mcMMO]
-folia-supported: true
+folia-supported: false
 libraries:
   - 'com.mysql:mysql-connector-j:9.0.0'
   - 'org.xerial:sqlite-jdbc:3.46.0.0'
