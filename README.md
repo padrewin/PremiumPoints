@@ -12,4 +12,6 @@ For any confusion you can join our [**Discord server**](https://discord.colddev.
 PlayerPoints is compatible with Spigot and any forks of it.<br>
 Recommending using Paper.<br>
 CraftBukkit is **NOT** and **will NOT** be supported.<br>
-![](https://imgur.com/tkUtAKi.png)
+![](https://imgur.com/tkUtAKi.png)<br>
+
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/padrewin/PlayerPoints/total?logo=coin&color=dark-green)
