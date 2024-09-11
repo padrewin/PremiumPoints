@@ -6,7 +6,7 @@
 
     <groupId>dev.padrewin</groupId>
     <artifactId>playerpoints</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>PlayerPoints</name>
@@ -60,6 +60,10 @@
 
 
     <repositories>
+        <repository>
+            <id>com.github.padrewin</id>
+            <url>https://maven.pkg.github.com/Cold-Development/ColdPlugin</url>
+        </repository>
         <repository>
             <id>rosewood-repo</id>
             <url>https://repo.rosewooddev.io/repository/public/</url>

@@ -69,7 +69,6 @@ public class PlayerPoints extends ColdPlugin {
         DatabaseConnector connector;
 
         if (databaseType.equalsIgnoreCase("mysql")) {
-            // Initialize MySQLConnector
             String hostname = getConfig().getString("database.mysql.hostname");
             int port = getConfig().getInt("database.mysql.port");
             String database = getConfig().getString("database.mysql.database");
@@ -80,7 +79,6 @@ public class PlayerPoints extends ColdPlugin {
 
             connector = new MySQLConnector(this, hostname, port, database, username, password, useSSL, poolSize);
         } else {
-            // Initialize SQLiteConnector
             connector = new SQLiteConnector(this);
         }
 
