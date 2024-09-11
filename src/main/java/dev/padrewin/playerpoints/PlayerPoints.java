@@ -42,7 +42,7 @@ public class PlayerPoints extends ColdPlugin {
     String ANSI_YELLOW = "\u001B[33m";
 
     public PlayerPoints() {
-        super(80745, 10234, DataManager.class, LocaleManager.class, null);
+        super(119535, 10234, DataManager.class, LocaleManager.class, null);
         instance = this;
     }
 
