@@ -15,8 +15,8 @@ public class PointsMessageListener implements PluginMessageListener {
     public static final String REFRESH_SUBCHANNEL = "playerpoints:refresh";
     private final DataManager dataManager;
 
-    public PointsMessageListener(ColdPlugin rosePlugin) {
-        this.dataManager = rosePlugin.getManager(DataManager.class);
+    public PointsMessageListener(ColdPlugin coldPlugin) {
+        this.dataManager = coldPlugin.getManager(DataManager.class);
     }
 
     @Override
