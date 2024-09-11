@@ -1,5 +1,5 @@
 # Plugin Message Prefix
-prefix: '&7[<g:#E8A230:#ECD32D>{{PLUGIN_NAME}}&7] '
+prefix: '&8「&#8A2387P&#9A287Fl&#AA2D77a&#BA326Fy&#C93667e&#D93B5Fr&#E94057P&#EB4A4Co&#ED5441i&#EE5D37n&#F0672Ct&#F27121s&8」&7» '
 
 # Currency
 currency-singular: 'Point'
@@ -16,95 +16,95 @@ no-console: '&cSeuls les joueurs peuvent exécuter cette commande.'
 invalid-amount: '&cLe montant doit être un nombre entier positif.'
 unknown-player: '&cLe joueur est introuvable: &b%player%'
 unknown-command: '&cCommande inconnue: &b%input%'
-votifier-voted: '&eMerci d''avoir voté sur %service%! &b%amount% &ea été ajouté à votre solde.'
+votifier-voted: '&7Merci d''avoir voté sur %service%! &b%amount% &7a été ajouté à votre solde.'
 leaderboard-empty-entry: 'Cela pourrait être vous!'
 command-cooldown: '&cVeuillez attendre avant d''utiliser à nouveau cette commande.'
 
 # Base Command Message
-base-command-color: '&e'
-base-command-help: '&eUtilise &b/points help &epour les informations de commande.'
+base-command-color: '&7'
+base-command-help: '&7Utilise &b/points help &7pour les informations de commande.'
 
 # Help Command
 command-help-description: '&8 - &d/points help &7- Affiche le menu d''aide ... Vous êtes arrivé'
-command-help-title: '&eCommandes disponibles:'
+command-help-title: '&7Commandes disponibles:'
 
 # Give Command
 command-give-description: '&8 - &d/points give &7- Donner des points à un joueur'
-command-give-usage: '&cUtilisation: &e/points give <joueur> <montant>'
+command-give-usage: '&cUtilisation: &7/points give <joueur> <montant>'
 command-give-success: '&b%player% &aa été donné &b%amount% &a%currency%.'
-command-give-received: '&eVous avez reçu &b%amount% &e%currency%.'
+command-give-received: '&7Vous avez reçu &b%amount% &7%currency%.'
 
 # Give All Command
 command-giveall-description: '&8 - &d/points giveall &7- Donne des points à tous les joueurs en ligne'
-command-giveall-usage: '&cUtilisation: &e/points giveall <montant> [*]'
+command-giveall-usage: '&cUtilisation: &7/points giveall <montant> [*]'
 command-giveall-success: '&aGave &b%amount% &a%currency% à tous les joueurs en ligne.'
 
 # Take Command
 command-take-description: '&8 - &d/points take &7- Prenez des points d''un joueur'
-command-take-usage: '&cUtilisation: &e/points take <joueur> <montant>'
+command-take-usage: '&cUtilisation: &7/points take <joueur> <montant>'
 command-take-success: '&aA pris &b%amount% &a%currency% de &b%player%&a.'
 command-take-not-enough: '&b%player% &cn''a pas assez %currency% pour cela.'
 
 # Look Command
 command-look-description: '&8 - &d/points look &7- Afficher les points d''un joueur'
-command-look-usage: '&cUtilisation: &e/points look <joueur>'
-command-look-success: '&b%player% &epossède &b%amount% &e%currency%.'
+command-look-usage: '&cUtilisation: &7/points look <joueur>'
+command-look-success: '&b%player% &7possède &b%amount% &7%currency%.'
 
 # Pay Command
 command-pay-description: '&8 - &d/points pay &7- Payer un joueur'
-command-pay-usage: '&cUtilisation: &e/points pay <joueur> <montant>'
+command-pay-usage: '&cUtilisation: &7/points pay <joueur> <montant>'
 command-pay-self: '&cVous ne pouvez pas vous payer vous-même !'
 command-pay-sent: '&aTu as payé &b%player% %amount% &a%currency%.'
-command-pay-received: '&eTu étais payé &b%amount% &e%currency% par &b%player%&e.'
+command-pay-received: '&7Tu étais payé &b%amount% &7%currency% par &b%player%&7.'
 command-pay-lacking-funds: '&cTu n''as pas assez %currency% pour ça.'
 
 # Set Command
 command-set-description: '&8 - &d/points set &7- Définir les points d''un joueur'
-command-set-usage: '&cUtilisation: &e/points set <joueur> <montant>'
+command-set-usage: '&cUtilisation: &7/points set <joueur> <montant>'
 command-set-success: '&av %currency% de &b%player% &aà &b%amount%&a.'
 
 # Reset Command
 command-reset-description: '&8 - &d/points reset &7- Réinitialiser les points d''un joueur'
-command-reset-usage: '&cUtilisation: &e/points reset <joueur>'
+command-reset-usage: '&cUtilisation: &7/points reset <joueur>'
 command-reset-success: '&aRéinitialisez le %currency% pour &b%player% &a.'
 
 # Me Command
 command-me-description: '&8 - &d/points me &7- Afficher vos points'
 command-me-usage: '&cUtilisation: &d/points me'
-command-me-success: '&eVous avez &b%amount% &e%currency%.'
+command-me-success: '&7Vous avez &b%amount% &7%currency%.'
 
 # Lead Command
 command-lead-description: '&8 - &d/points lead &7- Voir le classement'
-command-lead-usage: '&cUtilisation: &e/points lead [next|prev|#]'
-command-lead-title: '&eLeaderboard &7(Page #%page%/%pages%)'
-command-lead-entry: '&b%position%). &e%player% &7- &6%amount% %currency%'
+command-lead-usage: '&cUtilisation: &7/points lead [next|prev|#]'
+command-lead-title: '&7Leaderboard &7(Page #%page%/%pages%)'
+command-lead-entry: '&b%position%). &7%player% &7- &6%amount% %currency%'
 
 # Broadcast Command
 command-broadcast-description: '&8 - &d/points broadcast &7- Diffuser les points d''un joueur'
-command-broadcast-usage: '&cUtilisation: &e/points broadcast <joueur>'
-command-broadcast-message: '&b%player% &epossède &b%amount% &e%currency%.'
+command-broadcast-usage: '&cUtilisation: &7/points broadcast <joueur>'
+command-broadcast-message: '&b%player% &7possède &b%amount% &7%currency%.'
 
 # Reload Command
 command-reload-description: '&8 - &d/points reload &7- Recharge le plugin'
-command-reload-usage: '&cUtilisation: &e/points reload'
+command-reload-usage: '&cUtilisation: &7/points reload'
 command-reload-success: '&aLes fichiers de configuration et de paramètres régionaux ont été rechargés.'
 
 # Export Command
 command-export-description: '&8 - &d/points export &7- Exporte les données vers storage.yml'
-command-export-usage: '&cUtilisation: &e/points export'
+command-export-usage: '&cUtilisation: &7/points export'
 command-export-success: '&aLes données de sauvegarde ont été exportées vers storage.yml.'
 command-export-warning: '&cRemarque: un fichier storage.yml existe déjà. Si vous souhaitez l''écraser, utilisez &b/points export confirm&c.'
 
 # Import Command
 command-import-description: '&8 - &d/points import &7- Importe les données depuis storage.yml'
-command-import-usage: '&cUtilisation: &e/points import'
+command-import-usage: '&cUtilisation: &7/points import'
 command-import-success: '&aLes données de sauvegarde ont été importées depuis storage.yml.'
 command-import-no-backup: '&cImpossible d''importer, storage.yml n''existe pas. Vous pouvez en générer un avec &b/points export &cet utilisez-le pour transférer des données entre les types de bases de données.'
 command-import-warning: '&cRemarque: Cette opération supprimera toutes les données de la base de données active et la remplacera par le contenu de storage.yml. &cLe type de base de données actuellement actif est &b&o&l%type%&c. &cSi vous en êtes absolument sûr, utilisez &b/points import confirm&c.'
 
 # Convert Command
 command-convert-description: '&8 - &d/points convert &7- Charge les données de devise à partir d''un autre plugin'
-command-convert-usage: '&cUtilisation: &e/points convert <plugin>'
+command-convert-usage: '&cUtilisation: &7/points convert <plugin>'
 command-convert-invalid: '&b%plugin% &cn''est pas un nom de plugin de devise convertible.'
 command-convert-success: '&aDonnées monétaires de &b%plugin% &aa été converti.'
 command-convert-failure: '&cUne erreur s''est produite lors de la tentative de conversion des données. Veuillez vérifier votre console et signaler toute erreur à l''auteur du plugin PlayerPoints.'
@@ -112,7 +112,7 @@ command-convert-warning: '&cRemarque: Cette opération supprimera toutes les don
 
 # Import Legacy Command
 command-importlegacy-description: '&8 - &d/points importlegacy &7- Importe une table hérité'
-command-importlegacy-usage: '&cUtilisation: &e/points importlegacy <table>'
+command-importlegacy-usage: '&cUtilisation: &7/points importlegacy <table>'
 command-importlegacy-success: '&aLes données de la table hérité one été importé avec succès de &b%table%&a.'
 command-importlegacy-failure: '&cUne erreur est survenue lors de l’importation des données hérité de &b%table%&c. Esc-ce que cette table exist?'
 command-importlegacy-only-mysql: '&cCette commande est uniquement disponible si vous avez MySQL activé.'

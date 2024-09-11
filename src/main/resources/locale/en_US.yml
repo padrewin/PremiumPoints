@@ -1,14 +1,14 @@
 # Plugin Message Prefix
-prefix: '&7[<g:#E8A230:#ECD32D>{{PLUGIN_NAME}}&7] '
+prefix: '&8「&#8A2387P&#9A287Fl&#AA2D77a&#BA326Fy&#C93667e&#D93B5Fr&#E94057P&#EB4A4Co&#ED5441i&#EE5D37n&#F0672Ct&#F27121s&8」&7» '
 
 # Currency
-currency-singular: 'Point'
-currency-plural: 'Points'
+currency-singular: Point
+currency-plural: Points
 currency-separator: ','
-currency-decimal: '.'
-number-abbreviation-thousands: 'k'
-number-abbreviation-millions: 'm'
-number-abbreviation-billions: 'b'
+currency-decimal: .
+number-abbreviation-thousands: k
+number-abbreviation-millions: m
+number-abbreviation-billions: b
 
 # Misc
 no-permission: '&cYou don''t have permission for that!'
@@ -16,106 +16,106 @@ no-console: '&cOnly players may execute this command.'
 invalid-amount: '&cAmount must be a positive whole number.'
 unknown-player: '&cPlayer could not be found: &b%player%'
 unknown-command: '&cUnknown command: &b%input%'
-votifier-voted: '&eThanks for voting on %service%! &b%amount% &ehas been added to your balance.'
-leaderboard-empty-entry: 'This could be you!'
+votifier-voted: '&7Thanks for voting on &c%service%&7! &c&b%amount% &7has been added to your balance.'
+leaderboard-empty-entry: This could be you!
 command-cooldown: '&cPlease wait before using that command again.'
 
 # Base Command Message
-base-command-color: '&e'
-base-command-help: '&eUse &b/points help &efor command information.'
+base-command-color: '&7'
+base-command-help: '&7Use &c/points help &7for command information.'
 
 # Help Command
-command-help-description: '&8 - &d/points help &7- Displays the help menu... You have arrived'
-command-help-title: '&eAvailable Commands:'
+command-help-description: '&8 - &c/points help &7- Displays the help menu... You have arrived'
+command-help-title: '&cAvailable Commands:'
 
 # Give Command
-command-give-description: '&8 - &d/points give &7- Give a player points'
-command-give-usage: '&cUsage: &e/points give <player> <amount>'
-command-give-success: '&b%player% &awas given &b%amount% &a%currency%.'
-command-give-received: '&eYou have received &b%amount% &e%currency%.'
+command-give-description: '&8 - &c/points give &7- Give a player points'
+command-give-usage: '&7Usage: &c/points give <player> <amount>'
+command-give-success: '&c%player% &7was given &c%amount% &c%currency%&7.'
+command-give-received: '&7You have received &c%amount% &c%currency%&7.'
 
 # Give All Command
-command-giveall-description: '&8 - &d/points giveall &7- Gives all online players points'
-command-giveall-usage: '&cUsage: &e/points giveall <amount> [*]'
-command-giveall-success: '&aGave &b%amount% &a%currency% to all online players.'
+command-giveall-description: '&8 - &c/points giveall &7- Gives all online players points'
+command-giveall-usage: '&7Usage: &c/points giveall <amount> [*]'
+command-giveall-success: '&7Gave &c%amount% &c%currency% &7to all online players.'
 
 # Take Command
-command-take-description: '&8 - &d/points take &7- Take points from a player'
-command-take-usage: '&cUsage: &e/points take <player> <amount>'
-command-take-success: '&aTook &b%amount% &a%currency% from &b%player%&a.'
-command-take-not-enough: '&b%player% &cdoes not have enough %currency% for that.'
+command-take-description: '&8 - &c/points take &7- Take points from a player'
+command-take-usage: '&7Usage: &c/points take <player> <amount>'
+command-take-success: '&7Took &c%amount% &c%currency% from &c%player%&a&7.'
+command-take-not-enough: '&c%player% &7does not have enough %currency% for that.'
 
 # Look Command
-command-look-description: '&8 - &d/points look &7- View a player''s points'
-command-look-usage: '&cUsage: &e/points look <player>'
-command-look-success: '&b%player% &ehas &b%amount% &e%currency%.'
+command-look-description: '&8 - &c/points look &7- View a player''s points'
+command-look-usage: '&7Usage: &c/points look <player>'
+command-look-success: '&c%player% &7has &c%amount% &c%currency%&7.'
 
 # Pay Command
-command-pay-description: '&8 - &d/points pay &7- Pay a player'
-command-pay-usage: '&cUsage: &e/points pay <player> <amount>'
+command-pay-description: '&8 - &c/points pay &7- Pay a player'
+command-pay-usage: '&7Usage: &c/points pay <player> <amount>'
 command-pay-self: '&cYou cannot pay yourself!'
-command-pay-sent: '&aYou paid &b%player% %amount% &a%currency%.'
-command-pay-received: '&eYou were paid &b%amount% &e%currency% by &b%player%&e.'
+command-pay-sent: '&7You paid &c%player% %amount% &c%currency%&7.'
+command-pay-received: '&7You were paid &c%amount% &c%currency% by &c%player%&7.'
 command-pay-lacking-funds: '&cYou do not have enough %currency% for that.'
 
 # Set Command
-command-set-description: '&8 - &d/points set &7- Set a player''s points'
-command-set-usage: '&cUsage: &e/points set <player> <amount>'
-command-set-success: '&aSet the %currency% of &b%player% &ato &b%amount%&a.'
+command-set-description: '&8 - &c/points set &7- Set a player''s points'
+command-set-usage: '&7Usage: &c/points set <player> <amount>'
+command-set-success: '&7Set the %currency% of &c%player% &7to &c%amount%&7.'
 
 # Reset Command
-command-reset-description: '&8 - &d/points reset &7- Reset a player''s points'
-command-reset-usage: '&cUsage: &e/points reset <player>'
-command-reset-success: '&aReset the %currency% for &b%player%&a.'
+command-reset-description: '&8 - &c/points reset &7- Reset a player''s points'
+command-reset-usage: '&7Usage: &c/points reset <player>'
+command-reset-success: '&7Reset the %currency% for &c%player%&7.'
 
 # Me Command
-command-me-description: '&8 - &d/points me &7- View your points'
-command-me-usage: '&cUsage: &d/points me'
-command-me-success: '&eYou have &b%amount% &e%currency%.'
+command-me-description: '&8 - &c/points me &7- View your points'
+command-me-usage: '&7Usage: &c/points me'
+command-me-success: '&7You have &c%amount% &c%currency%&7.'
 
 # Lead Command
-command-lead-description: '&8 - &d/points lead &7- View the leaderboard'
-command-lead-usage: '&cUsage: &e/points lead [next|prev|#]'
-command-lead-title: '&eLeaderboard &7(Page #%page%/%pages%)'
-command-lead-entry: '&b%position%). &e%player% &7- &6%amount% %currency%'
+command-lead-description: '&8 - &c/points lead &7- View the leaderboard'
+command-lead-usage: '&7Usage: &c/points lead [next|prev|#]'
+command-lead-title: '&7Leaderboard &c(Page #%page%/%pages%)'
+command-lead-entry: '&c%position%). &c%player% &7- &c%amount% %currency%'
 
 # Broadcast Command
-command-broadcast-description: '&8 - &d/points broadcast &7- Broadcast a player''s points'
-command-broadcast-usage: '&cUsage: &e/points broadcast <player>'
-command-broadcast-message: '&b%player% &ehas &b%amount% &e%currency%.'
+command-broadcast-description: '&8 - &c/points broadcast &7- Broadcast a player''s points'
+command-broadcast-usage: '&7Usage: &c/points broadcast <player>'
+command-broadcast-message: '&c%player% &7has &c%amount% &c%currency%&7.'
 
 # Reload Command
-command-reload-description: '&8 - &d/points reload &7- Reloads the plugin'
-command-reload-usage: '&cUsage: &e/points reload'
-command-reload-success: '&aConfiguration and locale files were reloaded.'
+command-reload-description: '&8 - &c/points reload &7- Reloads the plugin'
+command-reload-usage: '&7Usage: &c/points reload'
+command-reload-success: '&7Configuration and locale files were reloaded.'
 
 # Export Command
-command-export-description: '&8 - &d/points export &7- Exports the data to storage.yml'
-command-export-usage: '&cUsage: &e/points export'
+command-export-description: '&8 - &c/points export &7- Exports the data to storage.yml'
+command-export-usage: '&7Usage: &c/points export'
 command-export-success: '&aSave data has been exported to storage.yml.'
-command-export-warning: '&cNotice: A storage.yml file already exists. If you would like to overwrite it, use &b/points export confirm&c.'
+command-export-warning: '&cNotice: A storage.yml file already exists. If you would like to overwrite it, use &d/points &cexport confirm.'
 
 # Import Command
-command-import-description: '&8 - &d/points import &7- Imports the data from storage.yml'
-command-import-usage: '&cUsage: &e/points import'
+command-import-description: '&8 - &c/points import &7- Imports the data from storage.yml'
+command-import-usage: '&7Usage: &c/points import'
 command-import-success: '&aSave data has been imported from storage.yml.'
-command-import-no-backup: '&cUnable to import, storage.yml does not exist. You can generate one with &b/points export &cand use it to transfer data between database types.'
+command-import-no-backup: '&cUnable to import, storage.yml does not exist. You can generate one with &d/points export &cand use it to transfer data between database types.'
 command-import-warning: '&cNotice: This operation will delete all data from the active database and replace it with the contents of storage.yml. &cThe currently active database type is &b&o&l%type%&c. &cIf you are absolutely sure about this, use &b/points import confirm&c.'
 
 # Convert Command
-command-convert-description: '&8 - &d/points convert &7- Loads currency data from another plugin'
-command-convert-usage: '&cUsage: &e/points convert <plugin>'
-command-convert-invalid: '&b%plugin% &cis not a convertible currency plugin name.'
-command-convert-success: '&aCurrency data from &b%plugin% &ais being converted.'
+command-convert-description: '&8 - &c/points convert &7- Loads currency data from another plugin'
+command-convert-usage: '&7Usage: &c/points convert <plugin>'
+command-convert-invalid: '&4%plugin% &cis not a convertible currency plugin name.'
+command-convert-success: '&aCurrency data from &4%plugin% &ais being converted.'
 command-convert-failure: '&cAn error occurred while attempting to convert the data. Please check your console and report any errors to the PlayerPoints plugin author.'
-command-convert-warning: '&cNotice: This operation will delete all data from the active database and replace it with the data from &b%plugin%&c. &cIf you are absolutely sure about this, use &b/points convert %plugin% confirm&c.'
+command-convert-warning: '&cNotice: This operation will delete all data from the active database and replace it with the data from &4%plugin%&c. &cIf you are absolutely sure about this, use &d/points convert %plugin% confirm&c.'
 
 # Import Legacy Command
-command-importlegacy-description: '&8 - &d/points importlegacy &7- Import a legacy table'
-command-importlegacy-usage: '&cUsage: &e/points importlegacy <table>'
-command-importlegacy-success: '&aSuccessfully imported legacy data from &b%table%&a.'
-command-importlegacy-failure: '&cFailed to import legacy data from &b%table%&c. Does the table exist?'
+command-importlegacy-description: '&8 - &c/points importlegacy &7- Import a legacy table'
+command-importlegacy-usage: '&7Usage: &c/points importlegacy <table>'
+command-importlegacy-success: '&aSuccessfully imported legacy data from &d%table%&a.'
+command-importlegacy-failure: '&cFailed to import legacy data from &d%table%&c. Does the table exist?'
 command-importlegacy-only-mysql: '&cThis command is only available when you have MySQL enabled.'
 
 # Version Command
-command-version-description: '&8 - &d/points version &7- Display the version info for PlayerPoints'
+command-version-description: '&8 - &c/points version &7- Display the version info for PlayerPoints'

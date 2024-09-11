@@ -1,10 +1,11 @@
-package dev.padrewin.playerpoints;
+package org.black_ixx.playerpoints;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+import dev.padrewin.playerpoints.PlayerPoints;
 import dev.padrewin.playerpoints.event.PlayerPointsChangeEvent;
 import dev.padrewin.playerpoints.event.PlayerPointsResetEvent;
 import dev.padrewin.playerpoints.manager.DataManager;

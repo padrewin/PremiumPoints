@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 /**
  * Handles the commands for the root command.
  *
- * @author Mitsugaru
+ * @author padrewin
  */
 public class Commander extends CommandHandler {
 
@@ -41,27 +41,30 @@ public class Commander extends CommandHandler {
 
     @Override
     public void noArgs(CommandSender sender) {
-        String redirect = SettingKey.BASE_COMMAND_REDIRECT.get().trim().toLowerCase();
-        PointsCommand command = this.registeredCommands.get(redirect);
-        CommandHandler handler = this.registeredHandlers.get(redirect);
-        if (command != null) {
-            if (!command.hasPermission(sender)) {
-                this.plugin.getManager(LocaleManager.class).sendMessage(sender, "no-permission");
-                return;
+        try {
+            String redirect = SettingKey.BASE_COMMAND_REDIRECT.get().trim().toLowerCase();
+            PointsCommand command = this.registeredCommands.get(redirect);
+            CommandHandler handler = this.registeredHandlers.get(redirect);
+            if (command != null) {
+                if (!command.hasPermission(sender)) {
+                    this.plugin.getManager(LocaleManager.class).sendMessage(sender, "no-permission");
+                    return;
+                }
+                command.execute(this.plugin, sender, new String[0]);
+            } else if (handler != null) {
+                if (!handler.hasPermission(sender)) {
+                    this.plugin.getManager(LocaleManager.class).sendMessage(sender, "no-permission");
+                    return;
+                }
+                handler.noArgs(sender);
+            } else {
+                VersionCommand.sendInfo(this.plugin, sender);
             }
-
-            command.execute(this.plugin, sender, new String[0]);
-        } else if (handler != null) {
-            if (!handler.hasPermission(sender)) {
-                this.plugin.getManager(LocaleManager.class).sendMessage(sender, "no-permission");
-                return;
-            }
-
-            handler.noArgs(sender);
-        } else {
-            VersionCommand.sendInfo(this.plugin, sender);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 
     @Override
     public void unknownCommand(CommandSender sender, String[] args) {
