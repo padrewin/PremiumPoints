@@ -1,6 +1,6 @@
 ![](https://imgur.com/f43GEYX.png)
 --
-* PlayerPoints is a currency Minecraft plugin, adding the ability to manager points for every players.<br>
+* PlayerPoints is a currency Minecraft plugin, adding the ability to manager points for every player, with SQLite and MySQL database support.<br>
 * This plugin is supporting **SQLite** and **MySQL** database. Default will be SQLite but can be edited in `config.yml` file.<br>
 * This is a plugin based on a structure plugin named `ColdDev`, a continuation of the original PlayerPoints plugin by `black_ixx` which can be found [**here**](https://github.com/Mitsugaru/PlayerPoints).
 
