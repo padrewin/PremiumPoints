@@ -34,7 +34,7 @@ public class PlayerPoints extends ColdPlugin {
 
     String ANSI_RESET = "\u001B[0m";
     String ANSI_CHINESE_PURPLE = "\u001B[38;5;93m";
-    String ANSI_PURPLE = "\u001B[35m"; // Culoarea Purple
+    String ANSI_PURPLE = "\u001B[35m";
     String ANSI_GREEN = "\u001B[32m";
     String ANSI_RED = "\u001B[31m";
     String ANSI_AQUA = "\u001B[36m";
@@ -42,7 +42,7 @@ public class PlayerPoints extends ColdPlugin {
     String ANSI_YELLOW = "\u001B[33m";
 
     public PlayerPoints() {
-        super(119535, 10234, DataManager.class, LocaleManager.class, null);
+        super(119535, 23343, DataManager.class, LocaleManager.class, null);
         instance = this;
     }
 
