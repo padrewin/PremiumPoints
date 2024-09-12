@@ -8,7 +8,7 @@ api-version: '1.20'
 load: STARTUP
 softdepend: [Vault, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
 loadbefore: [mcMMO]
-folia-supported: false
+folia-supported: true
 libraries:
   - 'com.mysql:mysql-connector-j:9.0.0'
   - 'org.xerial:sqlite-jdbc:3.46.0.0'
