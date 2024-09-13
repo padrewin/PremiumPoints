@@ -1,7 +1,7 @@
 name: PlayerPoints
 version: '@version@'
 authors: [padrewin]
-website: 'https://github/com/padrewin'
+website: 'https://www.spigotmc.org/resources/⭐-playerpoints-⭐.119535/'
 description: A point based currency system
 main: dev.padrewin.playerpoints.PlayerPoints
 api-version: '1.20'

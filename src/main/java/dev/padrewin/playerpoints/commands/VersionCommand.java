@@ -38,7 +38,7 @@ public class VersionCommand extends PointsCommand {
         List<String> authors = plugin.getDescription().getAuthors();
         String firstAuthor = authors.size() > 0 ? authors.get(0) : "padrewin";
 
-        localeManager.sendCustomMessage(sender, baseColor + "&7Plugin created by: <g:#FF0000:#793434>" + firstAuthor);
+        localeManager.sendCustomMessage(sender, baseColor + "&7Developer: <g:#FF0000:#793434>" + firstAuthor);
 
         if (sender instanceof Player) {
             Player player = (Player) sender;

@@ -37,6 +37,7 @@ public class GiveAllCommand extends PointsCommand {
         }
 
         boolean includeOffline = args.length > 1 && args[1].equals("*");
+        boolean silent = args.length > 2 && args[args.length - 1].equalsIgnoreCase("-s");
 
         plugin.getScheduler().runTaskAsync(() -> {
             boolean success;
@@ -48,10 +49,12 @@ public class GiveAllCommand extends PointsCommand {
             }
 
             if (success) {
-                for (Player player : Bukkit.getOnlinePlayers()) {
-                    localeManager.sendMessage(player, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
-                            .add("currency", localeManager.getCurrencyName(amount))
-                            .build());
+                if (!silent) {
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        localeManager.sendMessage(player, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
+                                .add("currency", localeManager.getCurrencyName(amount))
+                                .build());
+                    }
                 }
 
                 localeManager.sendMessage(sender, "command-giveall-success", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))

@@ -29,14 +29,14 @@ command-help-description: '&8 - &c/points help &7- Displays the help menu... You
 command-help-title: '&cAvailable Commands:'
 
 # Give Command
-command-give-description: '&8 - &c/points give &7- Give a player points'
-command-give-usage: '&7Usage: &c/points give <player> <amount>'
+command-give-description: '&8 - &c/points give &7- Give a player points &a(support -s [SILENT])'
+command-give-usage: '&7Usage: &c/points give <player> <amount> [-s]'
 command-give-success: '&c%player% &7was given &c%amount% &c%currency%&7.'
 command-give-received: '&7You have received &c%amount% &c%currency%&7.'
 
 # Give All Command
-command-giveall-description: '&8 - &c/points giveall &7- Gives all online players points'
-command-giveall-usage: '&7Usage: &c/points giveall <amount> [*]'
+command-giveall-description: '&8 - &c/points giveall &7- Gives all online players points &a(support -s [SILENT])'
+command-giveall-usage: '&7Usage: &c/points giveall <amount> [*] [-s]'
 command-giveall-success: '&7Gave &c%amount% &c%currency% &7to all online players.'
 
 # Take Command

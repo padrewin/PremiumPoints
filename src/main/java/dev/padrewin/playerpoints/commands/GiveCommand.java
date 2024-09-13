@@ -25,6 +25,8 @@ public class GiveCommand extends PointsCommand {
             return;
         }
 
+        boolean silent = args.length > 2 && args[args.length - 1].equalsIgnoreCase("-s");
+
         PointsUtils.getPlayerByName(args[0], player -> {
             if (player == null) {
                 localeManager.sendMessage(sender, "unknown-player", StringPlaceholders.of("player", args[0]));
@@ -45,15 +47,13 @@ public class GiveCommand extends PointsCommand {
             }
 
             if (plugin.getAPI().give(player.getFirst(), amount)) {
-                // Send message to receiver
                 Player onlinePlayer = Bukkit.getPlayer(player.getFirst());
-                if (onlinePlayer != null) {
+                if (onlinePlayer != null && !silent) {
                     localeManager.sendMessage(onlinePlayer, "command-give-received", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
                             .add("currency", localeManager.getCurrencyName(amount))
                             .build());
                 }
 
-                // Send message to sender
                 localeManager.sendMessage(sender, "command-give-success", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
                         .add("currency", localeManager.getCurrencyName(amount))
                         .add("player", player.getSecond())

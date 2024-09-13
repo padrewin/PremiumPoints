@@ -2,120 +2,120 @@
 prefix: '&8「&#8A2387P&#9A287Fl&#AA2D77a&#BA326Fy&#C93667e&#D93B5Fr&#E94057P&#EB4A4Co&#ED5441i&#EE5D37n&#F0672Ct&#F27121s&8」&7» '
 
 # Currency
-currency-singular: 'Point'
-currency-plural: 'Points'
+currency-singular: Điểm
+currency-plural: Điểm
 currency-separator: ','
-currency-decimal: '.'
-number-abbreviation-thousands: 'k'
-number-abbreviation-millions: 'm'
-number-abbreviation-billions: 'b'
+currency-decimal: .
+number-abbreviation-thousands: k
+number-abbreviation-millions: triệu
+number-abbreviation-billions: tỷ
 
 # Misc
-no-permission: '&cBạn không có quyền để sử dụng!'
+no-permission: '&cBạn không có quyền để làm điều đó!'
 no-console: '&cChỉ người chơi mới có thể thực hiện lệnh này.'
-invalid-amount: '&cSố tiền phải là một số nguyên dương.'
+invalid-amount: '&cSố tiền phải là số nguyên dương.'
 unknown-player: '&cKhông thể tìm thấy người chơi: &b%player%'
-unknown-command: '&cLệnh không xác định: &b%input%'
-votifier-voted: '&eCảm ơn vì đã bỏ phiếu trên %service%! &b%amount% &eđã được thêm vào số dư của bạn.'
-leaderboard-empty-entry: 'Đây có thể là bạn!'
-command-cooldown: '&cVui lòng đợi trước khi sử dụng lại lệnh đó.'
+unknown-command: '&cLệnh không tồn tại: &b%input%'
+votifier-voted: '&7Cảm ơn bạn đã bình chọn trên &c%service%&7! &c&b%amount% &7đã được thêm vào số dư của bạn.'
+leaderboard-empty-entry: Đây có thể là bạn!
+command-cooldown: '&cVui lòng chờ trước khi sử dụng lệnh này lần nữa.'
 
 # Base Command Message
-base-command-color: '&e'
-base-command-help: '&eSử dụng &b/points help &echo thông tin các lệnh.'
+base-command-color: '&7'
+base-command-help: '&7Sử dụng &c/points help &7để biết thông tin về các lệnh.'
 
 # Help Command
-command-help-description: '&8 - &d/points help &7- Hiển thị menu trợ giúp ... Bạn đã đến'
-command-help-title: '&eCác lệnh có sẵn:'
+command-help-description: '&8 - &c/points help &7- Hiển thị menu trợ giúp... Bạn đã đến đây'
+command-help-title: '&cCác Lệnh Có Sẵn:'
 
 # Give Command
-command-give-description: '&8 - &d/points give &7- Trao cho người chơi points'
-command-give-usage: '&cSử dụng: &e/points give <người chơi> <số lượng>'
-command-give-success: '&b%player% &ađã nhận được &b%amount% &a%currency%.'
-command-give-received: '&eBạn đã nhận được &b%amount% &e%currency%.'
+command-give-description: '&8 - &c/points give &7- Cấp điểm cho một người chơi &a(cũng hỗ trợ -s [IM LẶNG])'
+command-give-usage: '&7Sử dụng: &c/points give <người chơi> <số lượng> [-s]'
+command-give-success: '&c%player% &7đã nhận được &c%amount% &c%currency%&7.'
+command-give-received: '&7Bạn đã nhận được &c%amount% &c%currency%&7.'
 
 # Give All Command
-command-giveall-description: '&8 - &d/points giveall &7- Trao cho tất cả người chơi trực tuyến points'
-command-giveall-usage: '&cSử dụng: &e/points giveall <số lượng> [*]'
-command-giveall-success: '&aTrao &b%amount% &a%currency% cho tất cả người chơi trực tuyến.'
+command-giveall-description: '&8 - &c/points giveall &7- Cấp điểm cho tất cả người chơi đang online &a(cũng hỗ trợ -s [IM LẶNG])'
+command-giveall-usage: '&7Sử dụng: &c/points giveall <số lượng> [*] [-s]'
+command-giveall-success: '&7Đã cấp &c%amount% &c%currency% &7cho tất cả người chơi đang online.'
 
 # Take Command
-command-take-description: '&8 - &d/points take &7- Lấy points từ người chơi'
-command-take-usage: '&cSử dụng: &e/points take <người chơi> <số lượng>'
-command-take-success: '&aLấy đi &b%amount% &a%currency% từ &b%player%&a.'
-command-take-not-enough: '&b%player% &ckhông có đủ %currency% cho điều này.'
+command-take-description: '&8 - &c/points take &7- Lấy điểm từ một người chơi'
+command-take-usage: '&7Sử dụng: &c/points take <người chơi> <số lượng>'
+command-take-success: '&7Đã lấy &c%amount% &c%currency% từ &c%player%&7.'
+command-take-not-enough: '&c%player% &7không có đủ %currency% cho việc đó.'
 
 # Look Command
-command-look-description: '&8 - &d/points look &7- Xem points của người chơi'
-command-look-usage: '&cSử dụng: &e/points look <người chơi>'
-command-look-success: '&b%player% &ecó &b%amount% &e%currency%.'
+command-look-description: '&8 - &c/points look &7- Xem điểm của một người chơi'
+command-look-usage: '&7Sử dụng: &c/points look <người chơi>'
+command-look-success: '&c%player% &7có &c%amount% &c%currency%&7.'
 
 # Pay Command
-command-pay-description: '&8 - &d/points pay &7- Chuyển points cho người chơi'
-command-pay-usage: '&cSử dụng: &e/points pay <người chơi> <số lượng>'
-command-pay-self: '&cBạn không thể chuyển cho chính mình.'
-command-pay-sent: '&aBạn đã chuyển cho &b%player% %amount% &a%currency%.'
-command-pay-received: '&eBạn đã được chuyển &b%amount% &e%currency% bởi &b%player%&e.'
-command-pay-lacking-funds: '&cBạn không có đủ %currency% cho điều này.'
+command-pay-description: '&8 - &c/points pay &7- Thanh toán cho một người chơi'
+command-pay-usage: '&7Sử dụng: &c/points pay <người chơi> <số lượng>'
+command-pay-self: '&cBạn không thể tự trả cho mình!'
+command-pay-sent: '&7Bạn đã trả &c%player% %amount% &c%currency%&7.'
+command-pay-received: '&7Bạn đã nhận được &c%amount% &c%currency% từ &c%player%&7.'
+command-pay-lacking-funds: '&cBạn không có đủ %currency% cho việc đó.'
 
 # Set Command
-command-set-description: '&8 - &d/points set &7- Đặt số points của người chơi'
-command-set-usage: '&cSử dụng: &e/points set <người chơi> <số lượng>'
-command-set-success: '&aĐặt số %currency% của &b%player% &athành &b%amount%&a.'
+command-set-description: '&8 - &c/points set &7- Đặt điểm cho một người chơi'
+command-set-usage: '&7Sử dụng: &c/points set <người chơi> <số lượng>'
+command-set-success: '&7Điểm của &c%player% &7đã được đặt thành &c%amount%&7.'
 
 # Reset Command
-command-reset-description: '&8 - &d/points reset &7- Đặt lại số points của người chơi'
-command-reset-usage: '&cSử dụng: &e/points reset <người chơi>'
-command-reset-success: '&aĐặt lại số %currency% cho &b%player% &a.'
+command-reset-description: '&8 - &c/points reset &7- Đặt lại điểm của một người chơi'
+command-reset-usage: '&7Sử dụng: &c/points reset <người chơi>'
+command-reset-success: '&7Điểm của &c%player% &7đã được đặt lại.'
 
 # Me Command
-command-me-description: '&8 - &d/points me &7- Xem số points của bạn'
-command-me-usage: '&cSử dụng: &d/points me'
-command-me-success: '&eBạn có &b%amount% &e%currency%.'
+command-me-description: '&8 - &c/points me &7- Xem điểm của bạn'
+command-me-usage: '&7Sử dụng: &c/points me'
+command-me-success: '&7Bạn có &c%amount% &c%currency%&7.'
 
 # Lead Command
-command-lead-description: '&8 - &d/points lead &7- Xem bảng xếp hạng'
-command-lead-usage: '&cSử dụng: &e/points lead [next|prev|#]'
-command-lead-title: '&eBảng Xếp Hạng &7(Trang #%page%/%pages%)'
-command-lead-entry: '&b%position%). &e%player% &7- &6%amount% %currency%'
+command-lead-description: '&8 - &c/points lead &7- Xem bảng xếp hạng'
+command-lead-usage: '&7Sử dụng: &c/points lead [next|prev|#]'
+command-lead-title: '&7Bảng Xếp Hạng &c(Trang #%page%/%pages%)'
+command-lead-entry: '&c%position%). &c%player% &7- &c%amount% %currency%'
 
 # Broadcast Command
-command-broadcast-description: '&8 - &d/points broadcast &7- Broadcast points của người chơi'
-command-broadcast-usage: '&cSử dụng: &e/points broadcast <người chơi>'
-command-broadcast-message: '&b%player% &ecó &b%amount% &e%currency%.'
+command-broadcast-description: '&8 - &c/points broadcast &7- Phát sóng điểm của một người chơi'
+command-broadcast-usage: '&7Sử dụng: &c/points broadcast <người chơi>'
+command-broadcast-message: '&c%player% &7có &c%amount% &c%currency%&7.'
 
 # Reload Command
-command-reload-description: '&8 - &d/points reload &7- Tải lại plugin'
-command-reload-usage: '&cSử dụng: &e/points reload'
-command-reload-success: '&aCác tệp cấu hình và ngôn ngữ đã được tải lại.'
+command-reload-description: '&8 - &c/points reload &7- Tải lại plugin'
+command-reload-usage: '&7Sử dụng: &c/points reload'
+command-reload-success: '&7Các tệp cấu hình và ngôn ngữ đã được tải lại.'
 
 # Export Command
-command-export-description: '&8 - &d/points export &7- Xuất dữ liệu sang storage.yml'
-command-export-usage: '&cSử dụng: &e/points export'
-command-export-success: '&aLưu dữ liệu đã được xuất sang storage.yml.'
-command-export-warning: '&cLưu ý: Tệp storage.yml đã tồn tại. Nếu bạn muốn ghi đè nó, sử dụng &b/points export confirm&c.'
+command-export-description: '&8 - &c/points export &7- Xuất dữ liệu vào storage.yml'
+command-export-usage: '&7Sử dụng: &c/points export'
+command-export-success: '&aDữ liệu đã được xuất vào storage.yml.'
+command-export-warning: '&cLưu ý: Tệp storage.yml đã tồn tại. Nếu muốn ghi đè, hãy sử dụng &d/points &cexport confirm.'
 
 # Import Command
-command-import-description: '&8 - &d/points import &7- Nhập dữ liệu từ storage.yml'
-command-import-usage: '&cSử dụng: &e/points import'
-command-import-success: '&aLưu dữ liệu đã được nhập từ storage.yml.'
-command-import-no-backup: '&cKhông thể nhập, storage.yml không tồn tại. Bạn có thể tạo một cái bằng &b/points export &cvà sử dụng nó để chuyển dữ liệu giữa các loại cơ sở dữ liệu.'
-command-import-warning: '&cLưu ý: Thao tác này sẽ xóa tất cả dữ liệu khỏi cơ sở dữ liệu đang hoạt động và thay thế nó bằng nội dung của storage.yml. &cLoại cơ sở dữ liệu hiện đang hoạt động là &b&o&l%type%&c. &cNếu bạn hoàn toàn chắc chắn về điều này, hãy sử dụng &b/points import confirm&c.'
+command-import-description: '&8 - &c/points import &7- Nhập dữ liệu từ storage.yml'
+command-import-usage: '&7Sử dụng: &c/points import'
+command-import-success: '&aDữ liệu đã được nhập từ storage.yml.'
+command-import-no-backup: '&cKhông thể nhập, storage.yml không tồn tại. Bạn có thể tạo một tệp với &d/points export &cvà sử dụng nó để chuyển dữ liệu giữa các loại cơ sở dữ liệu.'
+command-import-warning: '&cLưu ý: Thao tác này sẽ xóa tất cả dữ liệu từ cơ sở dữ liệu hiện tại và thay thế bằng nội dung của storage.yml. &cLoại cơ sở dữ liệu hiện tại là &b&o&l%type%&c. &cNếu bạn chắc chắn, hãy sử dụng &b/points import confirm&c.'
 
 # Convert Command
-command-convert-description: '&8 - &d/points convert &7- Load dữ liệu tiền tệ từ một plugin khác'
-command-convert-usage: '&cSử dụng: &e/points convert <plugin>'
-command-convert-invalid: '&b%plugin% &ckhông phải là tên plugin tiền tệ có thể chuyển đổi.'
-command-convert-success: '&aDữ liệu tiền tệ từ &b%plugin% &ađã được chuyển đổi.'
-command-convert-failure: '&cĐã xảy ra lỗi khi cố gắng chuyển đổi dữ liệu. Vui lòng kiểm tra bảng điều khiển của bạn và báo cáo bất kỳ lỗi nào cho tác giả plugin PlayerPoints.'
-command-convert-warning: '&cLưu ý: Thao tác này sẽ xóa tất cả dữ liệu khỏi cơ sở dữ liệu đang hoạt động và thay thế bằng dữ liệu từ &b%plugin%&c. &cNếu bạn hoàn toàn chắc chắn về điều này, hãy sử dụng &b/points convert %plugin% confirm&c.'
+command-convert-description: '&8 - &c/points convert &7- Tải dữ liệu tiền tệ từ một plugin khác'
+command-convert-usage: '&7Sử dụng: &c/points convert <plugin>'
+command-convert-invalid: '&4%plugin% &ckhông phải là tên plugin tiền tệ có thể chuyển đổi.'
+command-convert-success: '&aDữ liệu tiền tệ từ &4%plugin% &ađang được chuyển đổi.'
+command-convert-failure: '&cĐã xảy ra lỗi khi cố gắng chuyển đổi dữ liệu. Vui lòng kiểm tra console của bạn và báo cáo bất kỳ lỗi nào cho tác giả của plugin PlayerPoints.'
+command-convert-warning: '&cLưu ý: Thao tác này sẽ xóa tất cả dữ liệu từ cơ sở dữ liệu hiện tại và thay thế bằng dữ liệu từ &4%plugin%&c. &cNếu bạn chắc chắn, hãy sử dụng &d/points convert %plugin% confirm&c.'
 
 # Import Legacy Command
-command-importlegacy-description: '&8 - &d/points importlegacy &7- Nhập một bảng kế thừa'
-command-importlegacy-usage: '&cSử dụng: &e/points importlegacy <table>'
-command-importlegacy-success: '&aĐã nhập thành công dữ liệu kế thừa từ &b%table%&a.'
-command-importlegacy-failure: '&cKhông thể nhập dữ liệu cũ từ &b%table%&c. Bảng có tồn tại không?'
-command-importlegacy-only-mysql: '&cLệnh này chỉ khả dụng khi bạn đã bật MySQL.'
+command-importlegacy-description: '&8 - &c/points importlegacy &7- Nhập bảng cũ'
+command-importlegacy-usage: '&7Sử dụng: &c/points importlegacy <bảng>'
+command-importlegacy-success: '&aĐã nhập dữ liệu cũ từ &d%table%&a thành công.'
+command-importlegacy-failure: '&cKhông thể nhập dữ liệu cũ từ &d%table%&c. Bảng có tồn tại không?'
+command-importlegacy-only-mysql: '&cLệnh này chỉ khả dụng khi MySQL được kích hoạt.'
 
 # Version Command
-command-version-description: '&8 - &d/points version &7- Hiển thị thông tin phiên bản cho PlayerPoints'
+command-version-description: '&8 - &c/points version &7- Hiển thị thông tin phiên bản cho PlayerPoints'

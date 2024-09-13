@@ -2,120 +2,120 @@
 prefix: '&8「&#8A2387P&#9A287Fl&#AA2D77a&#BA326Fy&#C93667e&#D93B5Fr&#E94057P&#EB4A4Co&#ED5441i&#EE5D37n&#F0672Ct&#F27121s&8」&7» '
 
 # Currency
-currency-singular: 'Pont'
-currency-plural: 'Pont'
+currency-singular: Pont
+currency-plural: Pontok
 currency-separator: ','
-currency-decimal: '.'
-number-abbreviation-thousands: 'k'
-number-abbreviation-millions: 'm'
-number-abbreviation-billions: 'b'
+currency-decimal: .
+number-abbreviation-thousands: ezer
+number-abbreviation-millions: m
+number-abbreviation-billions: mrd
 
 # Misc
-no-permission: '&cNincs jogod ehhez!'
-no-console: '&cCsak játékosok használhatják ezt a parancsot.'
-invalid-amount: '&cMennyiségnek pozitív egész számnak kell lennie.'
-unknown-player: '&cJátékos nem található: &b%player%'
+no-permission: '&cNincs jogosultságod ehhez!'
+no-console: '&cCsak játékosok hajthatják végre ezt a parancsot.'
+invalid-amount: '&cAz összegnek pozitív egész számnak kell lennie.'
+unknown-player: '&cA játékos nem található: &b%player%'
 unknown-command: '&cIsmeretlen parancs: &b%input%'
-votifier-voted: '&eKöszönjük hogy szavaztál ránk itt %service%! &b%amount% &ehozzáadva az egyenlegedhez.'
-leaderboard-empty-entry: 'Ez akár te is lehetsz!'
-command-cooldown: '&cKérjük, várjon, mielőtt újra használná ezt a parancsot.'
+votifier-voted: '&7Köszönjük a szavazatot a &c%service%&7 oldalán! &c&b%amount% &7került hozzáadásra az egyenlegedhez.'
+leaderboard-empty-entry: Ez lehetnél te is!
+command-cooldown: '&cKérlek várj mielőtt újra használod ezt a parancsot.'
 
 # Base Command Message
-base-command-color: '&e'
-base-command-help: '&eHasználd a &b/points help &eparancsot segítségért.'
+base-command-color: '&7'
+base-command-help: '&7Használd a &c/points help &7parancsot a parancsok megtekintéséhez.'
 
 # Help Command
-command-help-description: '&8 - &d/points help &7- Előhozza a segítségeket... Ahova megérkeztél'
-command-help-title: '&eElérhető Parancsok:'
+command-help-description: '&8 - &c/points help &7- Megjeleníti a súgó menüt... Megérkeztél'
+command-help-title: '&cElérhető Parancsok:'
 
 # Give Command
-command-give-description: '&8 - &d/points give &7- Ad a játékosnak pontot'
-command-give-usage: '&cHasználat: &e/points give <játékos> <mennyiség>'
-command-give-success: '&b%player% &akapott &b%amount% &a%currency%ot.'
-command-give-received: '&eKaptál &b%amount% &e%currency%ot.'
+command-give-description: '&8 - &c/points give &7- Pontokat ad egy játékosnak &a(támogatja a -s [CSENDBEN] kapcsolót is)'
+command-give-usage: '&7Használat: &c/points give <játékos> <összeg> [-s]'
+command-give-success: '&c%player% &7kapott &c%amount% &c%currency%&7.'
+command-give-received: '&7Kaptál &c%amount% &c%currency%&7.'
 
 # Give All Command
-command-giveall-description: '&8 - &d/points giveall &7- Ad az összes elérhető játékosnak pontot'
-command-giveall-usage: '&cHasználat: &e/points giveall <mennyiség> [*]'
-command-giveall-success: '&aAdtál &b%amount% &a%currency%ot az összes elérhető játékosnak.'
+command-giveall-description: '&8 - &c/points giveall &7- Minden online játékosnak ad pontokat &a(támogatja a -s [CSENDBEN] kapcsolót is)'
+command-giveall-usage: '&7Használat: &c/points giveall <összeg> [*] [-s]'
+command-giveall-success: '&7Adtál &c%amount% &c%currency% &7minden online játékosnak.'
 
 # Take Command
-command-take-description: '&8 - &d/points take &7- Elvesz pontot a játékostól'
-command-take-usage: '&cHasználat: &e/points take <játékos> <mennyiség>'
-command-take-success: '&aElvettél &b%amount% &a%currency%ot &b%player% &ajátékostól.'
-command-take-not-enough: '&b%player%-nak/nek &cnincs elég %currency%ja ehhez.'
+command-take-description: '&8 - &c/points take &7- Pontokat vesz el egy játékostól'
+command-take-usage: '&7Használat: &c/points take <játékos> <összeg>'
+command-take-success: '&7Elvettél &c%amount% &c%currency% &c%player%&7-tól.'
+command-take-not-enough: '&c%player% &7nem rendelkezik elegendő %currency%-al.'
 
 # Look Command
-command-look-description: '&8 - &d/points look &7- Játékos pontjainak megtekintése'
-command-look-usage: '&cHasználat: &e/points look <játékos>'
-command-look-success: '&b%player%-nak/nek &evan &b%amount% &e%currency%ja.'
+command-look-description: '&8 - &c/points look &7- Megnézi egy játékos pontjait'
+command-look-usage: '&7Használat: &c/points look <játékos>'
+command-look-success: '&c%player% &7rendelkezik &c%amount% &c%currency%-al.'
 
 # Pay Command
-command-pay-description: '&8 - &d/points pay &7- Fizetés egy játékosnak'
-command-pay-usage: '&cHasználat: &e/points pay <játékos> <mennyiség>'
-command-pay-self: '&cNem tudsz magadnak fizetni.'
-command-pay-sent: '&aFizettél &b%player%-nak/nek %amount% &a%currency%ot.'
-command-pay-received: '&eFizetett neked &b%amount% &e%currency%ot &b%player%&e.'
-command-pay-lacking-funds: '&cNincs elég %currency%od ehhez.'
+command-pay-description: '&8 - &c/points pay &7- Fizess egy játékosnak'
+command-pay-usage: '&7Használat: &c/points pay <játékos> <összeg>'
+command-pay-self: '&cNem fizethetsz magadnak!'
+command-pay-sent: '&7Fizettél &c%player% %amount% &c%currency%-al.'
+command-pay-received: '&7Fizettek neked &c%amount% &c%currency%-t &c%player% által.'
+command-pay-lacking-funds: '&cNincs elegendő %currency%-od ehhez.'
 
 # Set Command
-command-set-description: '&8 - &d/points set &7- Beállítja egy játékos pontját'
-command-set-usage: '&cHasználat: &e/points set <játékos> <mennyiség>'
-command-set-success: '&aBeállítottad a %currency%ját &b%player%-nak/nek &aennyire &b%amount%&a.'
+command-set-description: '&8 - &c/points set &7- Beállítja egy játékos pontjait'
+command-set-usage: '&7Használat: &c/points set <játékos> <összeg>'
+command-set-success: '&7A &c%player% &7pontjai be lettek állítva &c%amount%-ra&7.'
 
 # Reset Command
-command-reset-description: '&8 - &d/points reset &7- Játékos pontjait alaphelyzetbe állítja'
-command-reset-usage: '&cHasználat: &e/points reset <játékos>'
-command-reset-success: '&aAlaphelyzetbe állítottad a %currency%jait &b%player%-nak/nek&a.'
+command-reset-description: '&8 - &c/points reset &7- Visszaállítja egy játékos pontjait'
+command-reset-usage: '&7Használat: &c/points reset <játékos>'
+command-reset-success: '&7A &c%player% &7pontjai vissza lettek állítva.'
 
 # Me Command
-command-me-description: '&8 - &d/points me &7- Pontjaid megtekintése'
-command-me-usage: '&cHasználat: &d/points me'
-command-me-success: '&eNeked van &b%amount% &e%currency%od.'
+command-me-description: '&8 - &c/points me &7- Megnézi a saját pontjaidat'
+command-me-usage: '&7Használat: &c/points me'
+command-me-success: '&7Neked van &c%amount% &c%currency%-od&7.'
 
 # Lead Command
-command-lead-description: '&8 - &d/points lead &7- Ranglista megtekintése'
-command-lead-usage: '&cHasználat: &e/points lead [next|prev|#]'
-command-lead-title: '&eRanglista &7(Oldal #%page%/%pages%)'
-command-lead-entry: '&b%position%). &e%player% &7- &6%amount% %currency%'
+command-lead-description: '&8 - &c/points lead &7- Megnézi a ranglistát'
+command-lead-usage: '&7Használat: &c/points lead [következő|előző|#]'
+command-lead-title: '&7Ranglista &c(Oldal #%page%/%pages%)'
+command-lead-entry: '&c%position%). &c%player% &7- &c%amount% %currency%'
 
 # Broadcast Command
-command-broadcast-description: '&8 - &d/points broadcast &7- Kihírdeti a játékos pontjait'
-command-broadcast-usage: '&cHasználat: &e/points broadcast <játékos>'
-command-broadcast-message: '&b%player%-nak/nek &evan &b%amount% &e%currency%ja.'
+command-broadcast-description: '&8 - &c/points broadcast &7- Egy játékos pontjainak kihirdetése'
+command-broadcast-usage: '&7Használat: &c/points broadcast <játékos>'
+command-broadcast-message: '&c%player% &7rendelkezik &c%amount% &c%currency%-al.'
 
 # Reload Command
-command-reload-description: '&8 - &d/points reload &7- Újratölti a plugint'
-command-reload-usage: '&cHasználat: &e/points reload'
-command-reload-success: '&aKonfiguráció és a fordítások újratöltődtek.'
+command-reload-description: '&8 - &c/points reload &7- Újratölti a plugint'
+command-reload-usage: '&7Használat: &c/points reload'
+command-reload-success: '&7A konfigurációs és nyelvi fájlok újratöltve.'
 
 # Export Command
-command-export-description: '&8 - &d/points export &7- Exportálja az adatokat a storage.yml fájlba'
-command-export-usage: '&cHasználat: &e/points export'
-command-export-success: '&aMentett adatok exportálva a storage.yml fájlba.'
-command-export-warning: '&cFigyelmeztetés: A storage.yml fájl már létezik. Ha felül szeretnéd írni, használd a &b/points export confirm &cparancsot.'
+command-export-description: '&8 - &c/points export &7- Az adatokat exportálja a storage.yml fájlba'
+command-export-usage: '&7Használat: &c/points export'
+command-export-success: '&aAz adatok exportálva a storage.yml fájlba.'
+command-export-warning: '&cFigyelem: A storage.yml fájl már létezik. Ha felül szeretnéd írni, használd a &d/points &cexport confirm parancsot.'
 
 # Import Command
-command-import-description: '&8 - &d/points import &7- Importálja az adatokat a storage.yml fájlból'
-command-import-usage: '&cHasználat: &e/points import'
-command-import-success: '&aMentett adatok importálva a storage.yml fájlból.'
-command-import-no-backup: 'command-import-no-backup: ''&cSikertelen importálás, storage.yml fájl nem létezik. Készíthetsz egyet a &b/points export &cparancsal és használhatod hogy átvidd az adatokat az adatbázis típusok között.'''
-command-import-warning: '&cFigyelmeztetés: Ez a művelet törli az összes eddigi adatot és importálja az adatokat a storage.yml fájlból. &cA jelenleg aktív adatbázis típusa &b&o&l%type%&c. &cHa teljesen biztos vagy ebben, akkor használd a &b/points import confirm &cparancsot.'
+command-import-description: '&8 - &c/points import &7- Az adatokat importálja a storage.yml fájlból'
+command-import-usage: '&7Használat: &c/points import'
+command-import-success: '&aAz adatok importálva a storage.yml fájlból.'
+command-import-no-backup: '&cNem sikerült importálni, a storage.yml fájl nem létezik. Generálhatsz egyet a &d/points export &cparanccsal, és használhatod az adatok átvitelére az adatbázistípusok között.'
+command-import-warning: '&cFigyelem: Ez a művelet törli az összes adatot az aktív adatbázisból, és felváltja a storage.yml tartalmával. &cAz aktuálisan aktív adatbázis típusa &b&o&l%type%&c. &cHa biztos vagy ebben, használd a &b/points import confirm parancsot.'
 
 # Convert Command
-command-convert-description: '&8 - &d/points convert &7- Betölti a valuta adatot egy másik pluginból'
-command-convert-usage: '&cHasználat: &e/points convert <plugin>'
-command-convert-invalid: '&b%plugin% &cnem konvertálható valuta plugin.'
-command-convert-success: '&aValuta adat a &b%plugin%-ból/ből &aát konvertálva.'
-command-convert-failure: '&cHiba történt az adat konvertálás közben. Kérlek ellenőrizd a konzolt és jelezd a hibákat a PlayerPoints plugin készítőjének.'
-command-convert-warning: '&cFigyelmeztetés: Ez a művelet törli az összes eddigi adatot és importálja az adatokat a &b%plugin%-ból/ből&c. &cHa teljesen biztos vagy ebben, akkor használd a &b/points convert %plugin% confirm &cparancsot.'
+command-convert-description: '&8 - &c/points convert &7- Az adatok betöltése egy másik pluginból'
+command-convert-usage: '&7Használat: &c/points convert <plugin>'
+command-convert-invalid: '&4%plugin% &cnem érvényes átváltható valuta plugin név.'
+command-convert-success: '&aA &4%plugin% &avaluta adatai átkonvertálva.'
+command-convert-failure: '&cHiba történt az adatok konvertálása közben. Ellenőrizd a konzolt, és jelentkezz a PlayerPoints plugin szerzőjének.'
+command-convert-warning: '&cFigyelem: Ez a művelet törli az összes adatot az aktív adatbázisból, és felváltja a &4%plugin% adataival. &cHa biztos vagy ebben, használd a &d/points convert %plugin% confirm parancsot.'
 
 # Import Legacy Command
-command-importlegacy-description: '&8 - &d/points importlegacy &7- Importálja a régebbi táblát'
-command-importlegacy-usage: '&cHasználat: &e/points importlegacy <table>'
-command-importlegacy-success: '&aSikeresen importálva a régi adatok a &b%table%-ból/ből&a.'
-command-importlegacy-failure: '&cSikertelen régi adat importálás a &b%table%-ból/ből&c. Létezik az tábla?'
-command-importlegacy-only-mysql: '&cEz a parancs csak akkor elérhető ha a MySQL engedélyezve van.'
+command-importlegacy-description: '&8 - &c/points importlegacy &7- Régi táblázat importálása'
+command-importlegacy-usage: '&7Használat: &c/points importlegacy <táblázat>'
+command-importlegacy-success: '&aA régi adatok sikeresen importálva a &d%table% táblából.'
+command-importlegacy-failure: '&cNem sikerült importálni a régi adatokat a &d%table% táblából. Létezik a táblázat?'
+command-importlegacy-only-mysql: '&cEz a parancs csak akkor érhető el, ha a MySQL engedélyezve van.'
 
 # Version Command
-command-version-description: '&8 - &d/points version &7- Kiírja a verzió információt a PlayerPointsról'
+command-version-description: '&8 - &c/points version &7- Megjeleníti a PlayerPoints verzió adatait'
