@@ -6,7 +6,7 @@
 
     <groupId>dev.padrewin</groupId>
     <artifactId>playerpoints</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <packaging>jar</packaging>
 
     <name>PlayerPoints</name>
@@ -74,7 +74,7 @@
     <repositories>
         <repository>
             <id>com.github.padrewin</id>
-            <url>https://maven.pkg.github.com/Cold-Development/ColdPlugin</url>
+            <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
         </repository>
         <repository>
             <id>rosewood-repo</id>
@@ -104,16 +104,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>dev.padrewin</groupId>
+            <artifactId>ColdDev</artifactId>
+            <version>1.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
             <version>3.6.0</version>
             <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>dev.padrewin</groupId>
-            <artifactId>coldplugin</artifactId>
-            <version>1.2</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
