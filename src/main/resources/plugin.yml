@@ -1,9 +1,11 @@
-name: PlayerPoints
+name: PremiumPoints
 version: '@version@'
 authors: [padrewin]
-website: 'https://github.com/padrewin/PlayerPoints'
-description: A point based currency system
-main: dev.padrewin.playerpoints.PlayerPoints
+aliases: [PlayerPoints]
+provides: [PlayerPoints]
+website: 'https://github.com/padrewin/PremiumPoints'
+description: A premium points based currency system
+main: dev.padrewin.premiumpoints.PremiumPoints
 api-version: '1.20'
 load: STARTUP
 softdepend: [Vault, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
@@ -15,10 +17,10 @@ libraries:
 commands:
   points:
     aliases: [p]
-    description: Root command for PlayerPoints
+    description: Root command for PremiumPoints
 permissions:
   playerpoints.*:
-    description: Gives access to all PlayerPoints commands
+    description: Gives access to all PremiumPoints commands
     children:
       playerpoints.give: true
       playerpoints.giveall: true

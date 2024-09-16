@@ -1,11 +1,10 @@
-package org.black_ixx.playerpoints;
+package dev.padrewin.premiumpoints;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-import dev.padrewin.premiumpoints.PremiumPoints;
 import dev.padrewin.premiumpoints.event.PremiumPointsChangeEvent;
 import dev.padrewin.premiumpoints.event.PremiumPointsResetEvent;
 import dev.padrewin.premiumpoints.manager.DataManager;
@@ -20,11 +19,11 @@ import org.jetbrains.annotations.NotNull;
  *
  * Note: This API does not send any messages and changes will be saved to the database automatically.
  */
-public class PlayerPointsAPI {
+public class PremiumPointsAPI {
 
     private final PremiumPoints plugin;
 
-    public PlayerPointsAPI(PremiumPoints plugin) {
+    public PremiumPointsAPI(PremiumPoints plugin) {
         this.plugin = plugin;
     }
 
