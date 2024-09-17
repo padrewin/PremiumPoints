@@ -52,7 +52,7 @@ public abstract class PointsCommand implements NamedExecutor {
 
     @Override
     public boolean hasPermission(Permissible permissible) {
-        return permissible.hasPermission("playerpoints." + this.name);
+        return permissible.hasPermission("premiumpoints." + this.name);
     }
 
 }

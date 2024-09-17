@@ -48,6 +48,16 @@ public class PremiumPoints extends ColdPlugin {
 
     @Override
     public void enable() {
+        if (getServer().getPluginManager().getPlugin("PlayerPoints") != null) {
+            getLogger().warning("");
+            getLogger().warning(ANSI_RED + "PlayerPoints found." + ANSI_RESET);
+            getLogger().warning(ANSI_CHINESE_PURPLE + "PremiumPoints will be disabled to avoid conflicts." + ANSI_RESET);
+            getLogger().warning("");
+
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
+        }
+
         instance = this;
         this.api = new PlayerPointsAPI(this);
 
@@ -134,7 +144,7 @@ public class PremiumPoints extends ColdPlugin {
     public void disable() {
 
         getLogger().info("");
-        getLogger().info(ANSI_CHINESE_PURPLE + "PlayerPoints disabled." + ANSI_RESET);
+        getLogger().info(ANSI_CHINESE_PURPLE + "PremiumPoints disabled." + ANSI_RESET);
         getLogger().info("");
 
         if (this.vaultLayer != null)

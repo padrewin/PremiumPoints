@@ -1,8 +1,6 @@
 name: PremiumPoints
 version: '@version@'
 authors: [padrewin]
-aliases: [PlayerPoints]
-provides: [PlayerPoints]
 website: 'https://github.com/padrewin/PremiumPoints'
 description: A premium points based currency system
 main: dev.padrewin.premiumpoints.PremiumPoints
@@ -19,70 +17,70 @@ commands:
     aliases: [p]
     description: Root command for PremiumPoints
 permissions:
-  playerpoints.*:
+  premiumpoints.*:
     description: Gives access to all PremiumPoints commands
     children:
-      playerpoints.give: true
-      playerpoints.giveall: true
-      playerpoints.take: true
-      playerpoints.look: true
-      playerpoints.pay: true
-      playerpoints.set: true
-      playerpoints.reset: true
-      playerpoints.me: true
-      playerpoints.lead: true
-      playerpoints.reload: true
-      playerpoints.broadcast: true
-      playerpoints.export: true
-      playerpoints.import: true
-      playerpoints.convert: true
-      playerpoints.importlegacy: true
-      playerpoints.version: true
-  playerpoints.give:
+      premiumpoints.give: true
+      premiumpoints.giveall: true
+      premiumpoints.take: true
+      premiumpoints.look: true
+      premiumpoints.pay: true
+      premiumpoints.set: true
+      premiumpoints.reset: true
+      premiumpoints.me: true
+      premiumpoints.lead: true
+      premiumpoints.reload: true
+      premiumpoints.broadcast: true
+      premiumpoints.export: true
+      premiumpoints.import: true
+      premiumpoints.convert: true
+      premiumpoints.importlegacy: true
+      premiumpoints.version: true
+  premiumpoints.give:
     description: Gives access to the give command
     default: op
-  playerpoints.giveall:
+  premiumpoints.giveall:
     description: Gives access to the giveall command
     default: op
-  playerpoints.take:
+  premiumpoints.take:
     description: Gives access to the take command
     default: op
-  playerpoints.look:
+  premiumpoints.look:
     description: Gives access to the look command
     default: op
-  playerpoints.pay:
+  premiumpoints.pay:
     description: Gives access to the pay command
     default: op
-  playerpoints.set:
+  premiumpoints.set:
     description: Gives access to the set command
     default: op
-  playerpoints.reset:
+  premiumpoints.reset:
     description: Gives access to the reset command
     default: op
-  playerpoints.me:
+  premiumpoints.me:
     description: Gives access to the me command
     default: op
-  playerpoints.lead:
+  premiumpoints.lead:
     description: Gives access to the lead command
     default: op
-  playerpoints.reload:
+  premiumpoints.reload:
     description: Gives access to the reload command
     default: op
-  playerpoints.broadcast:
+  premiumpoints.broadcast:
     description: Gives access to the broadcast command
     default: op
-  playerpoints.export:
+  premiumpoints.export:
     description: Gives access to the export command
     default: op
-  playerpoints.import:
+  premiumpoints.import:
     description: Gives access to the import command
     default: op
-  playerpoints.convert:
+  premiumpoints.convert:
     description: Gives access to the convert command
     default: op
-  playerpoints.importlegacy:
+  premiumpoints.importlegacy:
     description: Gives access to the importlegacy command
     default: op
-  playerpoints.version:
+  premiumpoints.version:
     description: Gives access to the version command
     default: op
