@@ -1,6 +1,9 @@
-![](https://imgur.com/mekl311.png)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/padrewin/PremiumPoints/total?logo=coin&color=dark-green)
---
+![](https://imgur.com/mekl311.png)<br>
+[![Total Downloads](https://img.shields.io/github/downloads/padrewin/PremiumPoints/total?logo=coin&color=635aa7)](https://github.com/padrewin/PremiumPoints/releases)
+&nbsp;&nbsp;
+[![Latest Release](https://img.shields.io/github/v/release/padrewin/PremiumPoints?style=flat&logo=github&color=635aa7)](https://github.com/padrewin/PremiumPoints/packages/2256282)
+
+#
 * PremiumPoints is a currency Minecraft plugin, adding the ability to manager points for every player, with SQLite and MySQL database support.<br>
 * This plugin is supporting **SQLite** and **MySQL** database. Default will be SQLite but can be edited in `config.yml` file.<br>
 * This is a plugin based on a structure plugin named `ColdDev`, a continuation of PlayerPoints plugin by `black_ixx` which can be found [**here**](https://github.com/Mitsugaru/PlayerPoints).
