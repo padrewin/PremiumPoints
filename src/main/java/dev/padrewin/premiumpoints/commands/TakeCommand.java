@@ -7,6 +7,7 @@ import dev.padrewin.premiumpoints.PremiumPoints;
 import dev.padrewin.premiumpoints.manager.CommandManager;
 import dev.padrewin.premiumpoints.manager.LocaleManager;
 import dev.padrewin.premiumpoints.util.PointsUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
 public class TakeCommand extends PointsCommand {
@@ -41,10 +42,20 @@ public class TakeCommand extends PointsCommand {
                 return;
             }
 
+            int oldBalance = plugin.getAPI().look(player.getFirst());
+
             if (plugin.getAPI().take(player.getFirst(), amount)) {
+                int newBalance = plugin.getAPI().look(player.getFirst());
+
                 localeManager.sendMessage(sender, "command-take-success", StringPlaceholders.builder("player", player.getSecond())
                         .add("currency", localeManager.getCurrencyName(amount))
                         .add("amount", PointsUtils.formatPoints(amount))
+                        .build());
+
+                localeManager.sendMessage(Bukkit.getConsoleSender(), "command-take-log", StringPlaceholders.builder("player", player.getSecond())
+                        .add("amount", PointsUtils.formatPoints(amount))
+                        .add("new_balance", PointsUtils.formatPoints(newBalance))
+                        .add("currency", localeManager.getCurrencyName(newBalance))
                         .build());
             } else {
                 localeManager.sendMessage(sender, "command-take-not-enough", StringPlaceholders.builder("player", player.getSecond())
