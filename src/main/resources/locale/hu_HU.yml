@@ -10,6 +10,12 @@ number-abbreviation-thousands: ezer
 number-abbreviation-millions: m
 number-abbreviation-billions: mrd
 
+# Console log
+command-give-log: "&7Hozzáadva &c%amount% %currency% &7a(z) &c%player%&7 egyenlegéhez. Egyenleg: &c%new_balance% %currency%"
+command-reset-log: "&7Visszaállítva &c%player%&7 egyenlege. Egyenleg: &c%new_balance% %currency%"
+command-set-log: "&7Beállítva &c%player%&7 egyenlege. Egyenleg: &c%new_balance% %currency%"
+command-take-log: "&7Levélve &c%amount% %currency% &7a(z) &c%player%&7 egyenlegéből. Egyenleg: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cNincs jogosultságod ehhez!'
 no-console: '&cCsak játékosok hajthatják végre ezt a parancsot.'

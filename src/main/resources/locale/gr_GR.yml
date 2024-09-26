@@ -10,6 +10,12 @@ number-abbreviation-thousands: χιλ
 number-abbreviation-millions: εκατ
 number-abbreviation-billions: δισ
 
+# Console log
+command-give-log: "&7Πρόσθεσε &c%amount% %currency% &7στον λογαριασμό του &c%player%&7. Υπόλοιπο: &c%new_balance% %currency%"
+command-reset-log: "&7Επαναφορά του λογαριασμού του &c%player%&7. Υπόλοιπο: &c%new_balance% %currency%"
+command-set-log: "&7Ορίστηκε ο λογαριασμός του &c%player%&7. Υπόλοιπο: &c%new_balance% %currency%"
+command-take-log: "&7Αφαίρεση &c%amount% %currency% &7από τον λογαριασμό του &c%player%&7. Υπόλοιπο: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cΔεν έχετε άδεια για αυτό!'
 no-console: '&cΜόνο οι παίκτες μπορούν να εκτελέσουν αυτήν την εντολή.'

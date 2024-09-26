@@ -10,6 +10,12 @@ number-abbreviation-thousands: k
 number-abbreviation-millions: m
 number-abbreviation-billions: b
 
+# Console log
+command-give-log: "&7Added &c%amount% %currency% &7to &c%player%&7's balance. Balance: &c%new_balance% %currency%"
+command-reset-log: "&7Reset &c%player%'s &7balance. Balance: &c%new_balance% %currency%"
+command-set-log: "&7Set &c%player%&7's balance. Balance: &c%new_balance% %currency%"
+command-take-log: "&7Took &c%amount% %currency% &7from &c%player%&7's balance. Balance: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cYou don''t have permission for that!'
 no-console: '&cOnly players may execute this command.'

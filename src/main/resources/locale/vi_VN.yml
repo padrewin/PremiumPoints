@@ -10,6 +10,12 @@ number-abbreviation-thousands: k
 number-abbreviation-millions: triệu
 number-abbreviation-billions: tỷ
 
+# Console log
+command-give-log: "&7Đã thêm &c%amount% %currency% &7vào số dư của &c%player%&7. Số dư: &c%new_balance% %currency%"
+command-reset-log: "&7Đặt lại số dư của &c%player%&7. Số dư: &c%new_balance% %currency%"
+command-set-log: "&7Đã đặt số dư của &c%player%&7. Số dư: &c%new_balance% %currency%"
+command-take-log: "&7Đã lấy &c%amount% %currency% &7từ số dư của &c%player%&7. Số dư: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cBạn không có quyền để làm điều đó!'
 no-console: '&cChỉ người chơi mới có thể thực hiện lệnh này.'

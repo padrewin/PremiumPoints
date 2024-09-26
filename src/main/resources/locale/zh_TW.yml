@@ -10,6 +10,12 @@ number-abbreviation-thousands: 千
 number-abbreviation-millions: 百萬
 number-abbreviation-billions: 十億
 
+# Console log
+command-give-log: "&7已將 &c%amount% %currency% &7添加到 &c%player%&7 的餘額中。餘額: &c%new_balance% %currency%"
+command-reset-log: "&7已重置 &c%player%&7 的餘額。餘額: &c%new_balance% %currency%"
+command-set-log: "&7已設定 &c%player%&7 的餘額。餘額: &c%new_balance% %currency%"
+command-take-log: "&7已從 &c%player%&7 的餘額中取出 &c%amount% %currency%。餘額: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&c你沒有權限執行此操作！'
 no-console: '&c只有玩家才能執行此命令。'

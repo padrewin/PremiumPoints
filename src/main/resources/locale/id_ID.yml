@@ -10,6 +10,12 @@ number-abbreviation-thousands: rb
 number-abbreviation-millions: jt
 number-abbreviation-billions: m
 
+# Console log
+command-give-log: "&7Ditambahkan &c%amount% %currency% &7ke saldo &c%player%&7. Saldo: &c%new_balance% %currency%"
+command-reset-log: "&7Direset saldo &c%player%&7. Saldo: &c%new_balance% %currency%"
+command-set-log: "&7Ditetapkan saldo &c%player%&7. Saldo: &c%new_balance% %currency%"
+command-take-log: "&7Diambil &c%amount% %currency% &7dari saldo &c%player%&7. Saldo: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cKamu tidak memiliki izin untuk melakukan itu!'
 no-console: '&cHanya pemain yang dapat menjalankan perintah ini.'

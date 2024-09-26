@@ -10,6 +10,12 @@ number-abbreviation-thousands: 千
 number-abbreviation-millions: 百万
 number-abbreviation-billions: 十億
 
+# Console log
+command-give-log: "&7&c%amount% %currency% &7を &c%player%&7の残高に追加しました。残高: &c%new_balance% %currency%"
+command-reset-log: "&7&c%player%&7の残高をリセットしました。残高: &c%new_balance% %currency%"
+command-set-log: "&7&c%player%&7の残高を設定しました。残高: &c%new_balance% %currency%"
+command-take-log: "&7&c%amount% %currency% &7を &c%player%&7の残高から取りました。残高: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cその操作を行う権限がありません！'
 no-console: '&cこのコマンドはプレイヤーのみが実行できます。'

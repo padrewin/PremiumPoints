@@ -10,6 +10,12 @@ number-abbreviation-thousands: k
 number-abbreviation-millions: m
 number-abbreviation-billions: b
 
+# Console log
+command-give-log: "&7Ajouté &c%amount% %currency% &7au solde de &c%player%&7. Solde: &c%new_balance% %currency%"
+command-reset-log: "&7Réinitialisé le solde de &c%player%&7. Solde: &c%new_balance% %currency%"
+command-set-log: "&7Défini le solde de &c%player%&7. Solde: &c%new_balance% %currency%"
+command-take-log: "&7Retiré &c%amount% %currency% &7du solde de &c%player%&7. Solde: &c%new_balance% %currency%"
+
 # Misc
 no-permission: '&cVous n''avez pas la permission pour cela!'
 no-console: '&cSeuls les joueurs peuvent exécuter cette commande.'
