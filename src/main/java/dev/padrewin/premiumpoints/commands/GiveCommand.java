@@ -54,9 +54,17 @@ public class GiveCommand extends PointsCommand {
                             .build());
                 }
 
+                int newBalance = plugin.getAPI().look(player.getFirst());
+
                 localeManager.sendMessage(sender, "command-give-success", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
                         .add("currency", localeManager.getCurrencyName(amount))
                         .add("player", player.getSecond())
+                        .build());
+
+                localeManager.sendMessage(Bukkit.getConsoleSender(), "command-give-log", StringPlaceholders.builder("amount", PointsUtils.formatPoints(amount))
+                        .add("currency", localeManager.getCurrencyName(amount))
+                        .add("player", player.getSecond())
+                        .add("new_balance", PointsUtils.formatPoints(newBalance))
                         .build());
             }
         });
