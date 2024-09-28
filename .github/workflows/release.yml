@@ -1,8 +1,14 @@
-name: Maven Package
-
+name: Publish Release
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log Level'
+        required: false
+        default: 'warning'
 
 jobs:
   build:
@@ -10,9 +16,12 @@ jobs:
     permissions:
       contents: read
       packages: write
+  publish:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.commits[0].message, '[build]')"
 
     steps:
-    # Checkout the repository code
+    - name: Checkout Repository
     - uses: actions/checkout@v4
 
     # Set up JDK 17
