@@ -74,7 +74,7 @@
 
     <repositories>
         <repository>
-            <id>com.github.coldplugin</id>
+            <id>dev.padrewin.coldplugin</id>
             <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
         </repository>
         <repository>
