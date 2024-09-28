@@ -202,5 +202,4 @@ public class PremiumPoints extends ColdPlugin {
     public PlayerPointsAPI getAPI() {
         return api;
     }
-
 }
