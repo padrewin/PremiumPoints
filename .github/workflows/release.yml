@@ -27,10 +27,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Test Authentication with curl (Debugging step)
-      - name: Test Authentication with curl
+      # Test Authentication with verbose curl (Debugging step)
+      - name: Test Authentication with curl (Verbose)
         run: |
-          curl -u padrewin:${{ secrets.COLDDEV_PACKAGE }} \
+          curl -v -u padrewin:${{ secrets.COLDDEV_PACKAGE }} \
           https://maven.pkg.github.com/Cold-Development/ColdDev/dev/padrewin/coldplugin/1.4/coldplugin-1.4.pom
 
       # Create settings.xml with Personal Access Tokens
