@@ -1,3 +1,5 @@
+name: Build and Publish Package
+
 on:
   push:
     branches:
@@ -48,7 +50,15 @@ jobs:
       - name: Create settings.xml
         run: |
           cat <<EOF > $GITHUB_WORKSPACE/settings.xml
-          ${{ secrets.PREMIUMPOINTS_PACKAGE }}
+          <settings>
+            <servers>
+              <server>
+                <id>com.github.coldplugin</id>
+                <username>${{ github.actor }}</username>
+                <password>${{ secrets.GITHUB_TOKEN }}</password>
+              </server>
+            </servers>
+          </settings>
           EOF
 
       # Deploy the package to GitHub Packages using Maven
