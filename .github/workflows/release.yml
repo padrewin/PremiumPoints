@@ -29,9 +29,9 @@ jobs:
         ${{ secrets.PREMIUMPOINTS_PACKAGE }}
         EOF
 
-    # Build the project using Maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    # Clean, install, and update the Maven dependencies
+    - name: Clean and Install with Maven
+      run: mvn clean install -U --file pom.xml
 
     # Deploy the package to GitHub Packages using Maven
     - name: Publish to GitHub Packages Apache Maven
