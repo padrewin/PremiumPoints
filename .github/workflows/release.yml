@@ -1,5 +1,3 @@
-name: Build and Publish Package
-
 on:
   push:
     branches:
@@ -27,31 +25,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Create settings.xml using COLDDEV_PACKAGE and PREMIUMPOINTS_PACKAGE secrets
-      - name: Create settings.xml
-        run: |
-          echo "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\">" > $GITHUB_WORKSPACE/settings.xml
-          echo "  <servers>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.PREMIUMPOINTS }}</password>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
-
-      # Check settings.xml content for debugging purposes
-      - name: Check settings.xml content
-        run: cat $GITHUB_WORKSPACE/settings.xml
-
-      # Build the project using Maven with the simple settings.xml
+      # Build the project using Maven
       - name: Build with Maven
-        run: mvn -B deploy -s $GITHUB_WORKSPACE/settings.xml
+        run: mvn -B package --file pom.xml
 
   publish:
     runs-on: ubuntu-latest
@@ -68,24 +44,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Re-create settings.xml from the GitHub secrets for PremiumPoints and ColdDev
+      # Create settings.xml from the GitHub secret
       - name: Create settings.xml
         run: |
-          echo "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\">" > $GITHUB_WORKSPACE/settings.xml
-          echo "  <servers>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.PREMIUMPOINTS }}</password>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
+          cat <<EOF > $GITHUB_WORKSPACE/settings.xml
+          ${{ secrets.PREMIUMPOINTS_PACKAGE }}
+          EOF
 
       # Deploy the package to GitHub Packages using Maven
       - name: Publish to GitHub Packages Apache Maven
         run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
