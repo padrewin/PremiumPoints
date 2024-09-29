@@ -27,52 +27,23 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Create a simple settings.xml using only COLDDEV_PACKAGE secret
+      # Create settings.xml using COLDDEV_PACKAGE and PREMIUMPOINTS_PACKAGE secrets
       - name: Create settings.xml
         run: |
-          cat <<EOF > $GITHUB_WORKSPACE/settings.xml
-          <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-            
-            <activeProfiles>
-              <activeProfile>github</activeProfile>
-            </activeProfiles>
-            
-            <profiles>
-              <profile>
-                <id>github</id>
-                <repositories>
-                  <repository>
-                    <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
-                  </repository>
-                  <repository>
-                    <id>com.github.padrewin</id>
-                    <url>https://maven.pkg.github.com/padrewin/PremiumPoints</url>
-                  </repository>
-                  <repository>
-                    <id>com.github.coldplugin</id>
-                    <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
-                  </repository>
-                </repositories>
-              </profile>
-            </profiles>
-            
-            <servers>
-              <server>
-                <id>com.github.padrewin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
-              </server>
-              <server>
-                <id>com.github.coldplugin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
-              </server>
-            </servers>
-          </settings>
-          EOF
+          echo "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\">" > $GITHUB_WORKSPACE/settings.xml
+          echo "  <servers>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
 
       # Check settings.xml content for debugging purposes
       - name: Check settings.xml content
@@ -100,48 +71,20 @@ jobs:
       # Re-create settings.xml from the GitHub secrets for PremiumPoints and ColdDev
       - name: Create settings.xml
         run: |
-          cat <<EOF > $GITHUB_WORKSPACE/settings.xml
-          <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-            <activeProfiles>
-              <activeProfile>github</activeProfile>
-            </activeProfiles>
-
-            <profiles>
-              <profile>
-                <id>github</id>
-                <repositories>
-                  <repository>
-                    <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
-                  </repository>
-                  <repository>
-                    <id>com.github.padrewin</id>
-                    <url>https://maven.pkg.github.com/padrewin/PremiumPoints</url>
-                  </repository>
-                  <repository>
-                    <id>com.github.coldplugin</id>
-                    <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
-                  </repository>
-                </repositories>
-              </profile>
-            </profiles>
-
-            <servers>
-              <server>
-                <id>com.github.padrewin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
-              </server>
-              <server>
-                <id>com.github.coldplugin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
-              </server>
-            </servers>
-          </settings>
-          EOF
+          echo "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\">" > $GITHUB_WORKSPACE/settings.xml
+          echo "  <servers>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
 
       # Deploy the package to GitHub Packages using Maven
       - name: Publish to GitHub Packages Apache Maven
