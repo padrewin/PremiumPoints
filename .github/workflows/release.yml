@@ -53,9 +53,9 @@ jobs:
           </settings>
           EOF
 
-      # Build the project using Maven with settings.xml
+      # Build the project using Maven (without publishing)
       - name: Build with Maven
-        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        run: mvn package -s $GITHUB_WORKSPACE/settings.xml
         env:
           COLDDEV_PACKAGE: ${{ secrets.COLDDEV_PACKAGE }}
           GITHUB_ACTOR: padrewin
