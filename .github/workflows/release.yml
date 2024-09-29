@@ -27,9 +27,29 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # Create settings.xml from the GitHub secrets for PremiumPoints and ColdDev
+      - name: Create settings.xml
+        run: |
+          cat <<EOF > $GITHUB_WORKSPACE/settings.xml
+          <settings>
+            <servers>
+              <server>
+                <id>com.github.padrewin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
+              </server>
+              <server>
+                <id>com.github.coldplugin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
+              </server>
+            </servers>
+          </settings>
+          EOF
+
       # Build the project using Maven
       - name: Build with Maven
-        run: mvn -B deploy
+        run: mvn -B deploy -s $GITHUB_WORKSPACE/settings.xml
 
   publish:
     runs-on: ubuntu-latest
@@ -46,16 +66,21 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Create settings.xml from the GitHub secret
+      # Re-create settings.xml from the GitHub secrets for PremiumPoints and ColdDev
       - name: Create settings.xml
         run: |
           cat <<EOF > $GITHUB_WORKSPACE/settings.xml
           <settings>
             <servers>
               <server>
+                <id>com.github.padrewin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
+              </server>
+              <server>
                 <id>com.github.coldplugin</id>
-                <username>${{ github.actor }}</username>
-                <password>${{ secrets.GITHUB_TOKEN }}</password>
+                <username>padrewin</username>
+                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
               </server>
             </servers>
           </settings>
@@ -64,5 +89,3 @@ jobs:
       # Deploy the package to GitHub Packages using Maven
       - name: Publish to GitHub Packages Apache Maven
         run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
