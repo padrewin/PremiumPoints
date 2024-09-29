@@ -27,7 +27,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Create settings.xml from the GitHub secrets for PremiumPoints and ColdDev
+      # Create settings.xml with token secrets
       - name: Create settings.xml
         run: |
           cat <<EOF > $GITHUB_WORKSPACE/settings.xml
@@ -73,6 +73,10 @@ jobs:
           </servers>
           </settings>
           EOF
+
+      # Build the project using Maven
+      - name: Build with Maven
+        run: mvn -B deploy -s $GITHUB_WORKSPACE/settings.xml
 
       # Build the project using Maven
       - name: Build with Maven
