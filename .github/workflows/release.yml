@@ -27,52 +27,26 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Create settings.xml with token secrets
+      # Create a simple settings.xml using only COLDDEV_PACKAGE secret
       - name: Create settings.xml
         run: |
           cat <<EOF > $GITHUB_WORKSPACE/settings.xml
           <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                                http://maven.apache.org/xsd/settings-1.0.0.xsd">
-          <activeProfiles>
-            <activeProfile>github</activeProfile>
-          </activeProfiles>
-
-          <profiles>
-            <profile>
-              <id>github</id>
-              <repositories>
-                <repository>
-                  <id>central</id>
-                  <url>https://repo1.maven.org/maven2</url>
-                </repository>
-                <repository>
-                  <id>com.github.padrewin</id>
-                  <url>https://maven.pkg.github.com/padrewin/PremiumPoints</url>
-                </repository>
-                <repository>
-                  <id>com.github.coldplugin</id>
-                  <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
-                </repository>
-              </repositories>
-            </profile>
-          </profiles>
-
-          <servers>
-            <server>
-              <id>com.github.padrewin</id>
-              <username>padrewin</username>
-              <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
-            </server>
-            <server>
-              <id>com.github.coldplugin</id>
-              <username>padrewin</username>
-              <password>${{ secrets.COLDDEV_PACKAGE }}</password>
-            </server>
-          </servers>
+            xsi:schemaLocation="http://maven.apache.org/xsd/settings-1.0.0.xsd">
+            <servers>
+              <server>
+                <id>com.github.coldplugin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
+              </server>
+            </servers>
           </settings>
           EOF
+
+      # Build the project using Maven with the simple settings.xml
+      - name: Build with Maven
+        run: mvn -B deploy -s $GITHUB_WORKSPACE/settings.xml
 
       # Build the project using Maven
       - name: Build with Maven
