@@ -35,12 +35,12 @@ jobs:
           echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.PREMIUMPOINTS }}</password>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.COLDDEV }}</password>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
           echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
@@ -76,12 +76,12 @@ jobs:
           echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <id>com.github.padrewin</id>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.PREMIUMPOINTS }}</password>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    <server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <id>com.github.coldplugin</id>" >> $GITHUB_WORKSPACE/settings.xml
           echo "      <username>padrewin</username>" >> $GITHUB_WORKSPACE/settings.xml
-          echo "      <password>${{ secrets.COLDDEV_PACKAGE }}</password>" >> $GITHUB_WORKSPACE/settings.xml
+          echo "      <password>${{ secrets.COLDDEV }}</password>" >> $GITHUB_WORKSPACE/settings.xml
           echo "    </server>" >> $GITHUB_WORKSPACE/settings.xml
           echo "  </servers>" >> $GITHUB_WORKSPACE/settings.xml
           echo "</settings>" >> $GITHUB_WORKSPACE/settings.xml
