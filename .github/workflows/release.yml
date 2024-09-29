@@ -1,4 +1,4 @@
-name: Build Project
+name: Build and Publish Package
 
 on:
   push:
@@ -27,6 +27,35 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Build the project using Maven
+      # Test Authentication with curl
+      - name: Test Authentication with curl
+        run: |
+          curl -v -u padrewin:${{ secrets.COLDDEV_PACKAGE }} \
+          https://maven.pkg.github.com/Cold-Development/ColdDev/dev/padrewin/coldplugin/1.4/coldplugin-1.4.pom
+
+      # Create settings.xml with Personal Access Tokens using cat <<EOF
+      - name: Create settings.xml
+        run: |
+          cat <<EOF > $GITHUB_WORKSPACE/settings.xml
+          <settings>
+            <servers>
+              <server>
+                <id>com.github.padrewin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
+              </server>
+              <server>
+                <id>com.github.coldplugin</id>
+                <username>padrewin</username>
+                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
+              </server>
+            </servers>
+          </settings>
+          EOF
+
+      # Build the project using Maven with settings.xml
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        env:
+          COLDDEV_PACKAGE: ${{ secrets.COLDDEV_PACKAGE }}
+          GITHUB_ACTOR: padrewin
