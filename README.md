@@ -35,7 +35,8 @@ softdepend:
   - PremiumPoints
 ```
 Maven:
-- repository
+- repository<br>
+
 ```pom.xml
 <repository>
    <id>com.github.padrewin</id>
@@ -43,7 +44,8 @@ Maven:
 </repository>
 ```
 - dependency
-- Replace `TAG` with the latest version available; example `1.3.3`.
+- Replace `TAG` with the latest version available; example `1.3.3`.<br>
+
 ```pom.xml
 <dependency>
   <groupId>dev.padrewin</groupId>
