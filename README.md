@@ -42,6 +42,7 @@ depend:
 
 ### Maven:
 - Repository<br>
+
 ```pom.xml
 <repository>
    <id>com.github.padrewin</id>
@@ -50,6 +51,7 @@ depend:
 ```
 - Dependency
   - Replace `TAG` with the latest version available; example `1.3.3`.<br>
+  
 ```pom.xml
 <dependency>
   <groupId>dev.padrewin</groupId>
