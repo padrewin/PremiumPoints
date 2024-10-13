@@ -188,4 +188,5 @@ public class PremiumPointsAPI {
     public List<SortedPlayer> getTopSortedPoints() {
         return this.plugin.getManager(DataManager.class).getTopSortedPoints(null);
     }
+
 }
