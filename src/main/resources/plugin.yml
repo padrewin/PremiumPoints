@@ -2,7 +2,7 @@ name: PremiumPoints
 version: '@version@'
 authors: [padrewin]
 website: 'https://github.com/padrewin/PremiumPoints'
-description: A premium points based currency system
+description: An economy and currency system based on premium points
 main: dev.padrewin.premiumpoints.PremiumPoints
 api-version: '1.20'
 load: STARTUP
@@ -14,7 +14,7 @@ libraries:
   - 'org.xerial:sqlite-jdbc:3.46.0.0'
 commands:
   points:
-    aliases: [p]
+    aliases: [p, pp, ppoints, premiumpoints, premiump]
     description: Root command for PremiumPoints
 permissions:
   premiumpoints.*:
