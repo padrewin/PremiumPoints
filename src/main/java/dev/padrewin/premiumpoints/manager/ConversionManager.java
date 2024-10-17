@@ -1,7 +1,7 @@
 package dev.padrewin.premiumpoints.manager;
 
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.manager.Manager;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.manager.Manager;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

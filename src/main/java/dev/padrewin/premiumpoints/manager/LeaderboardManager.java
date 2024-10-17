@@ -1,8 +1,8 @@
 package dev.padrewin.premiumpoints.manager;
 
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.manager.Manager;
-import dev.padrewin.coldplugin.scheduler.task.ScheduledTask;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.manager.Manager;
+import dev.padrewin.colddev.scheduler.task.ScheduledTask;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

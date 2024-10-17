@@ -113,7 +113,7 @@ command-convert-description: '&8 - &c/points convert &7- Az adatok betöltése e
 command-convert-usage: '&7Használat: &c/points convert <plugin>'
 command-convert-invalid: '&4%plugin% &cnem érvényes átváltható valuta plugin név.'
 command-convert-success: '&aA &4%plugin% &avaluta adatai átkonvertálva.'
-command-convert-failure: '&cHiba történt az adatok konvertálása közben. Ellenőrizd a konzolt, és jelentkezz a PlayerPoints plugin szerzőjének.'
+command-convert-failure: '&cHiba történt az adatok konvertálása közben. Ellenőrizd a konzolt, és jelentkezz a PremiumPoints plugin szerzőjének.'
 command-convert-warning: '&cFigyelem: Ez a művelet törli az összes adatot az aktív adatbázisból, és felváltja a &4%plugin% adataival. &cHa biztos vagy ebben, használd a &d/points convert %plugin% confirm parancsot.'
 
 # Import Legacy Command
@@ -124,4 +124,4 @@ command-importlegacy-failure: '&cNem sikerült importálni a régi adatokat a &d
 command-importlegacy-only-mysql: '&cEz a parancs csak akkor érhető el, ha a MySQL engedélyezve van.'
 
 # Version Command
-command-version-description: '&8 - &c/points version &7- Megjeleníti a PlayerPoints verzió adatait'
+command-version-description: '&8 - &c/points version &7- Megjeleníti a PremiumPoints verzió adatait'

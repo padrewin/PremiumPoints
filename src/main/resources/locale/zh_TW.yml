@@ -113,7 +113,7 @@ command-convert-description: '&8 - &c/points convert &7- 從其他插件載入�
 command-convert-usage: '&7用法: &c/points convert <插件>'
 command-convert-invalid: '&4%plugin% &c不是可轉換的貨幣插件名稱。'
 command-convert-success: '&a正在轉換 &4%plugin% &a的貨幣資料。'
-command-convert-failure: '&c嘗試轉換資料時發生錯誤。請檢查你的控制台並向 PlayerPoints 插件作者報告任何錯誤。'
+command-convert-failure: '&c嘗試轉換資料時發生錯誤。請檢查你的控制台並向 PremiumPoints 插件作者報告任何錯誤。'
 command-convert-warning: '&c注意: 此操作將刪除當前資料庫中的所有資料，並用 &4%plugin%&c 的資料取代。 &c如果你確定，請使用 &d/points convert %plugin% confirm&c。'
 
 # Import Legacy Command
@@ -124,4 +124,4 @@ command-importlegacy-failure: '&c無法從 &d%table%&c 匯入舊資料。表格�
 command-importlegacy-only-mysql: '&c此命令僅在啟用 MySQL 時可用。'
 
 # Version Command
-command-version-description: '&8 - &c/points version &7- 顯示 PlayerPoints 的版本資訊'
+command-version-description: '&8 - &c/points version &7- 顯示 PremiumPoints 的版本資訊'

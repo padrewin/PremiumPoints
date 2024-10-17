@@ -113,7 +113,7 @@ command-convert-description: '&8 - &c/points convert &7- Charge les données de 
 command-convert-usage: '&7Utilisation: &c/points convert <plugin>'
 command-convert-invalid: '&4%plugin% &cn''est pas un nom de plugin de devise convertible.'
 command-convert-success: '&aLes données de devise de &4%plugin% &asont en cours de conversion.'
-command-convert-failure: '&cUne erreur est survenue lors de la tentative de conversion des données. Veuillez vérifier votre console et signaler toute erreur à l''auteur du plugin PlayerPoints.'
+command-convert-failure: '&cUne erreur est survenue lors de la tentative de conversion des données. Veuillez vérifier votre console et signaler toute erreur à l''auteur du plugin PremiumPoints.'
 command-convert-warning: '&cAttention: Cette opération supprimera toutes les données de la base de données active et les remplacera par les données de &4%plugin%&c. &cSi vous en êtes absolument certain, utilisez &d/points convert %plugin% confirm&c.'
 
 # Import Legacy Command
@@ -124,4 +124,4 @@ command-importlegacy-failure: '&cÉchec de l''importation des données héritée
 command-importlegacy-only-mysql: '&cCette commande est uniquement disponible lorsque MySQL est activé.'
 
 # Version Command
-command-version-description: '&8 - &c/points version &7- Affiche les informations de version pour PlayerPoints'
+command-version-description: '&8 - &c/points version &7- Affiche les informations de version pour PremiumPoints'

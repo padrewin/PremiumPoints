@@ -2,7 +2,7 @@ package dev.padrewin.premiumpoints.commands;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import dev.padrewin.coldplugin.utils.StringPlaceholders;
+import dev.padrewin.colddev.utils.StringPlaceholders;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;

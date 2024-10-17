@@ -113,7 +113,7 @@ command-convert-description: '&8 - &c/points convert &7- 他のプラグイン�
 command-convert-usage: '&7使用方法: &c/points convert <プラグイン>'
 command-convert-invalid: '&4%plugin% &cは変換可能な通貨プラグイン名ではありません。'
 command-convert-success: '&a&4%plugin%&a の通貨データが変換されています。'
-command-convert-failure: '&cデータを変換しようとした際にエラーが発生しました。コンソールを確認し、PlayerPoints プラグインの作者にエラーを報告してください。'
+command-convert-failure: '&cデータを変換しようとした際にエラーが発生しました。コンソールを確認し、PremiumPoints プラグインの作者にエラーを報告してください。'
 command-convert-warning: '&c注意: この操作は、アクティブなデータベースのすべてのデータを削除し、&4%plugin%&c のデータに置き換えます。 &cこれが確実な場合、&d/points convert %plugin% confirm&c を使用してください。'
 
 # Import Legacy Command
@@ -124,4 +124,4 @@ command-importlegacy-failure: '&c&d%table%&c からレガシーデータをイ�
 command-importlegacy-only-mysql: '&cこのコマンドは、MySQL が有効な場合のみ利用可能です。'
 
 # Version Command
-command-version-description: '&8 - &c/points version &7- PlayerPoints のバージョン情報を表示します'
+command-version-description: '&8 - &c/points version &7- PremiumPoints のバージョン情報を表示します'

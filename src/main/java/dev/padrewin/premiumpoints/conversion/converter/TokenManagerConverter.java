@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.conversion.converter;
 
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.SortedSet;

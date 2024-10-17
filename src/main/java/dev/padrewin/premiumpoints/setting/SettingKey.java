@@ -1,13 +1,13 @@
 package dev.padrewin.premiumpoints.setting;
 
-import dev.padrewin.coldplugin.config.CommentedConfigurationSection;
-import dev.padrewin.coldplugin.config.ColdSetting;
-import dev.padrewin.coldplugin.config.ColdSettingSerializer;
+import dev.padrewin.colddev.config.CommentedConfigurationSection;
+import dev.padrewin.colddev.config.ColdSetting;
+import dev.padrewin.colddev.config.ColdSettingSerializer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import dev.padrewin.premiumpoints.PremiumPoints;
-import static dev.padrewin.coldplugin.config.ColdSettingSerializers.*;
+import static dev.padrewin.colddev.config.ColdSettingSerializers.*;
 
 public class SettingKey {
 
@@ -29,7 +29,7 @@ public class SettingKey {
     public static final ColdSetting<String> BASE_COMMAND_REDIRECT = create("base-command-redirect", STRING, "", "Which command should we redirect to when using '/points' with no subcommand specified?", "You can use a value here such as 'me' to show the output of '/points me'", "If you have any aliases defined, do not use them here", "If left as blank, the default behavior of showing '/points version' with bypassed permissions will be used");
     public static final ColdSetting<CommentedConfigurationSection> LEGACY_DATABASE = create("legacy-database-mode", "Are you upgrading from a much older version of PremiumPoints?", "If you have done anything special with the database settings previously, you may need this", "WARNING: This setting may be removed in the future. Try to get your database updated to use the new format!");
     public static final ColdSetting<Boolean> LEGACY_DATABASE_MODE = create("legacy-database-mode.enabled", BOOLEAN, false, "Should we use legacy database mode?");
-    public static final ColdSetting<String> LEGACY_DATABASE_NAME = create("legacy-database-mode.table-name", STRING, "playerpoints", "The name of the legacy database table");
+    public static final ColdSetting<String> LEGACY_DATABASE_NAME = create("legacy-database-mode.table-name", STRING, "premiumpoints", "The name of the legacy database table");
 
     private static <T> ColdSetting<T> create(String key, ColdSettingSerializer<T> serializer, T defaultValue, String... comments) {
         ColdSetting<T> setting = ColdSetting.backed(PremiumPoints.getInstance(), key, serializer, defaultValue, comments);

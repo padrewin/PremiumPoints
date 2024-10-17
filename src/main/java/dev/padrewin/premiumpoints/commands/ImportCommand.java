@@ -1,7 +1,7 @@
 package dev.padrewin.premiumpoints.commands;
 
-import dev.padrewin.coldplugin.database.MySQLConnector;
-import dev.padrewin.coldplugin.utils.StringPlaceholders;
+import dev.padrewin.colddev.database.MySQLConnector;
+import dev.padrewin.colddev.utils.StringPlaceholders;
 import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;

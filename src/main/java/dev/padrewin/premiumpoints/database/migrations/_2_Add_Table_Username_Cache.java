@@ -1,7 +1,7 @@
 package dev.padrewin.premiumpoints.database.migrations;
 
-import dev.padrewin.coldplugin.database.DataMigration;
-import dev.padrewin.coldplugin.database.DatabaseConnector;
+import dev.padrewin.colddev.database.DataMigration;
+import dev.padrewin.colddev.database.DatabaseConnector;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

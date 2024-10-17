@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.commands;
 
-import dev.padrewin.coldplugin.utils.StringPlaceholders;
+import dev.padrewin.colddev.utils.StringPlaceholders;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

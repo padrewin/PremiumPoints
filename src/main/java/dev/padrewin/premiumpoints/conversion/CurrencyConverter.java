@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.conversion;
 
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 

@@ -1,7 +1,7 @@
 package dev.padrewin.premiumpoints.listeners;
 
 import com.vexsoftware.votifier.model.VotifierEvent;
-import dev.padrewin.coldplugin.utils.StringPlaceholders;
+import dev.padrewin.colddev.utils.StringPlaceholders;
 import dev.padrewin.premiumpoints.PremiumPoints;
 import dev.padrewin.premiumpoints.manager.LocaleManager;
 import dev.padrewin.premiumpoints.setting.SettingKey;

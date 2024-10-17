@@ -6,10 +6,10 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Iterables;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.database.DataMigration;
-import dev.padrewin.coldplugin.database.SQLiteConnector;
-import dev.padrewin.coldplugin.manager.AbstractDataManager;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.database.DataMigration;
+import dev.padrewin.colddev.database.SQLiteConnector;
+import dev.padrewin.colddev.manager.AbstractDataManager;
 import java.nio.charset.StandardCharsets;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -308,8 +308,8 @@ public class DataManager extends AbstractDataManager implements Listener {
         List<SortedPlayer> players = new ArrayList<>();
         this.databaseConnector.connect(connection -> {
             String query = "SELECT t." + this.getUuidColumnName() + ", username, points FROM " + this.getPointsTableName() + " t " +
-                           "LEFT JOIN " + this.getTablePrefix() + "username_cache c ON t.uuid = c.uuid " +
-                           "ORDER BY points DESC" + (limit != null ? " LIMIT " + limit : "");
+                    "LEFT JOIN " + this.getTablePrefix() + "username_cache c ON t.uuid = c.uuid " +
+                    "ORDER BY points DESC" + (limit != null ? " LIMIT " + limit : "");
             try (Statement statement = connection.createStatement()) {
                 ResultSet result = statement.executeQuery(query);
                 while (result.next()) {
@@ -339,8 +339,8 @@ public class DataManager extends AbstractDataManager implements Listener {
         this.databaseConnector.connect(connection -> {
             String tableName = this.getPointsTableName();
             String query = "SELECT t." + this.getUuidColumnName() + ", (SELECT COUNT(*) FROM " + tableName + " x WHERE x.points >= t.points) AS position " +
-                           "FROM " + tableName + " t " +
-                           "WHERE t.uuid IN (" + uuidList + ")";
+                    "FROM " + tableName + " t " +
+                    "WHERE t.uuid IN (" + uuidList + ")";
             try (Statement statement = connection.createStatement()) {
                 ResultSet result = statement.executeQuery(query);
                 while (result.next()) {

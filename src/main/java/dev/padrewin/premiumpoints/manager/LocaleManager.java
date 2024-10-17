@@ -1,7 +1,7 @@
 package dev.padrewin.premiumpoints.manager;
 
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.manager.AbstractLocaleManager;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.manager.AbstractLocaleManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.BlockCommandSender;
 import org.bukkit.command.CommandSender;

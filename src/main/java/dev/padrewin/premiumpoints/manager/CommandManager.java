@@ -1,9 +1,9 @@
 package dev.padrewin.premiumpoints.manager;
 
 import com.google.common.collect.Lists;
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.config.CommentedFileConfiguration;
-import dev.padrewin.coldplugin.manager.Manager;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.config.CommentedFileConfiguration;
+import dev.padrewin.colddev.manager.Manager;
 import java.io.File;
 import java.util.Collections;
 import java.util.List;

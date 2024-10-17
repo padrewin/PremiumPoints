@@ -2,7 +2,7 @@ package dev.padrewin.premiumpoints.listeners;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import dev.padrewin.premiumpoints.manager.DataManager;

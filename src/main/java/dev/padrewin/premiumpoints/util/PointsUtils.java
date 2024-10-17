@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.util;
 
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;

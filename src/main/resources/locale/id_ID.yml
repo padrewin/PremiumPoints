@@ -113,7 +113,7 @@ command-convert-description: '&8 - &c/points convert &7- Memuat data mata uang d
 command-convert-usage: '&7Penggunaan: &c/points convert <plugin>'
 command-convert-invalid: '&4%plugin% &cbukan nama plugin mata uang yang dapat dikonversi.'
 command-convert-success: '&aData mata uang dari &4%plugin% &asedang dikonversi.'
-command-convert-failure: '&cTerjadi kesalahan saat mencoba mengonversi data. Harap periksa konsolmu dan laporkan kesalahan apa pun ke pembuat plugin PlayerPoints.'
+command-convert-failure: '&cTerjadi kesalahan saat mencoba mengonversi data. Harap periksa konsolmu dan laporkan kesalahan apa pun ke pembuat plugin PremiumPoints.'
 command-convert-warning: '&cPeringatan: Operasi ini akan menghapus semua data dari basis data aktif dan menggantinya dengan data dari &4%plugin%&c. &cJika kamu benar-benar yakin, gunakan &d/points convert %plugin% confirm&c.'
 
 # Import Legacy Command
@@ -124,4 +124,4 @@ command-importlegacy-failure: '&cGagal mengimpor data lama dari &d%table%&c. Apa
 command-importlegacy-only-mysql: '&cPerintah ini hanya tersedia jika MySQL diaktifkan.'
 
 # Version Command
-command-version-description: '&8 - &c/points version &7- Menampilkan informasi versi untuk PlayerPoints'
+command-version-description: '&8 - &c/points version &7- Menampilkan informasi versi untuk PremiumPoints'

@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.conversion.converter;
 
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.ResultSet;

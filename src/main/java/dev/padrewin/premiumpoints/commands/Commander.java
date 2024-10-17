@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.commands;
 
-import dev.padrewin.coldplugin.utils.StringPlaceholders;
+import dev.padrewin.colddev.utils.StringPlaceholders;
 import dev.padrewin.premiumpoints.PremiumPoints;
 import dev.padrewin.premiumpoints.manager.CommandManager;
 import dev.padrewin.premiumpoints.manager.LocaleManager;

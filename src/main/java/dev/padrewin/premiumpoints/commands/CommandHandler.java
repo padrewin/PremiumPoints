@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.commands;
 
-import dev.padrewin.coldplugin.hook.PlaceholderAPIHook;
+import dev.padrewin.colddev.hook.PlaceholderAPIHook;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

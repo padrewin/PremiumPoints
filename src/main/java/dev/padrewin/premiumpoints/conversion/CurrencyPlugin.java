@@ -1,6 +1,6 @@
 package dev.padrewin.premiumpoints.conversion;
 
-import dev.padrewin.coldplugin.ColdPlugin;
+import dev.padrewin.colddev.ColdPlugin;
 import dev.padrewin.premiumpoints.PremiumPoints;
 import dev.padrewin.premiumpoints.conversion.converter.GamePointsConverter;
 import dev.padrewin.premiumpoints.conversion.converter.TokenManagerConverter;

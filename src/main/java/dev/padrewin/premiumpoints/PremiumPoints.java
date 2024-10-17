@@ -1,11 +1,11 @@
 package dev.padrewin.premiumpoints;
 
-import dev.padrewin.coldplugin.ColdPlugin;
-import dev.padrewin.coldplugin.config.ColdSetting;
-import dev.padrewin.coldplugin.database.DatabaseConnector;
-import dev.padrewin.coldplugin.database.MySQLConnector;
-import dev.padrewin.coldplugin.database.SQLiteConnector;
-import dev.padrewin.coldplugin.manager.Manager;
+import dev.padrewin.colddev.ColdPlugin;
+import dev.padrewin.colddev.config.ColdSetting;
+import dev.padrewin.colddev.database.DatabaseConnector;
+import dev.padrewin.colddev.database.MySQLConnector;
+import dev.padrewin.colddev.database.SQLiteConnector;
+import dev.padrewin.colddev.manager.Manager;
 import java.util.Arrays;
 import java.util.List;
 import net.milkbowl.vault.economy.Economy;

@@ -1,9 +1,9 @@
 package dev.padrewin.premiumpoints.database.migrations;
 
-import dev.padrewin.coldplugin.database.DataMigration;
-import dev.padrewin.coldplugin.database.DatabaseConnector;
-import dev.padrewin.coldplugin.database.MySQLConnector;
-import dev.padrewin.coldplugin.database.SQLiteConnector;
+import dev.padrewin.colddev.database.DataMigration;
+import dev.padrewin.colddev.database.DatabaseConnector;
+import dev.padrewin.colddev.database.MySQLConnector;
+import dev.padrewin.colddev.database.SQLiteConnector;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,16 +40,16 @@ public class _1_Create_Tables extends DataMigration {
             query = "SHOW TABLES LIKE ?";
         }
 
-        // Check if the old table already exists, if it does then try renaming the table to playerpoints_points and the 'playername' column to 'uuid'
+        // Check if the old table already exists, if it does then try renaming the table to premiumpoints_points and the 'playername' column to 'uuid'
         boolean exists;
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, "playerpoints");
+            statement.setString(1, "premiumpoints");
             exists = statement.executeQuery().next();
         }
 
         if (exists) {
             try (Statement statement = connection.createStatement()) {
-                statement.executeUpdate("ALTER TABLE playerpoints RENAME TO " + tablePrefix + "points");
+                statement.executeUpdate("ALTER TABLE premiumpoints RENAME TO " + tablePrefix + "points");
             } catch (Exception ignored) { }
 
             try (Statement statement = connection.createStatement()) {
