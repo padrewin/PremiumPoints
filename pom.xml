@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.padrewin</groupId>
-    <artifactId>PremiumPoints</artifactId>
+    <artifactId>premiumpoints</artifactId>
     <version>1.3.4</version>
     <packaging>jar</packaging>
 
@@ -60,6 +60,15 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <!-- Maven Jar Plugin for custom JAR name -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <finalName>PremiumPoints-${project.version}</finalName>
+                </configuration>
             </plugin>
         </plugins>
 
