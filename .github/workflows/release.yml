@@ -27,12 +27,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Test Authentication with curl
-      - name: Test Authentication with curl
-        run: |
-          curl -v -u padrewin:${{ secrets.COLDDEV_PACKAGE }} \
-          https://maven.pkg.github.com/Cold-Development/ColdDev/dev/padrewin/coldplugin/1.4/coldplugin-1.4.pom
-
       # Create settings.xml with Personal Access Tokens using cat <<EOF
       - name: Create settings.xml
         run: |
@@ -40,14 +34,9 @@ jobs:
           <settings>
             <servers>
               <server>
-                <id>com.github.padrewin</id>
+                <id>colddev-repo</id>
                 <username>padrewin</username>
-                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
-              </server>
-              <server>
-                <id>com.github.coldplugin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
+                <password>${{ secrets.COLDDEV_REPO }}</password>
               </server>
             </servers>
           </settings>
@@ -57,7 +46,7 @@ jobs:
       - name: Build with Maven
         run: mvn package -s $GITHUB_WORKSPACE/settings.xml
         env:
-          COLDDEV_PACKAGE: ${{ secrets.COLDDEV_PACKAGE }}
+          COLDDEV_PACKAGE: ${{ secrets.COLDDEV_REPO }}
           GITHUB_ACTOR: padrewin
 
   publish:
@@ -82,14 +71,9 @@ jobs:
           <settings>
             <servers>
               <server>
-                <id>com.github.padrewin</id>
+                <id>colddev-repo</id>
                 <username>padrewin</username>
-                <password>${{ secrets.PREMIUMPOINTS_PACKAGE }}</password>
-              </server>
-              <server>
-                <id>com.github.coldplugin</id>
-                <username>padrewin</username>
-                <password>${{ secrets.COLDDEV_PACKAGE }}</password>
+                <password>${{ secrets.COLDDEV_REPO }}</password>
               </server>
             </servers>
           </settings>
