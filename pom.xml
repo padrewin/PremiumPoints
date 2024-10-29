@@ -19,8 +19,8 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>com.github.padrewin</id>
-            <url>https://maven.pkg.github.com/padrewin/PremiumPoints</url>
+            <id>colddev-repo</id>
+            <url>https://hub.colddev.dev/repository/public-repository/</url>
         </repository>
     </distributionManagement>
 
@@ -65,7 +65,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.4.2</version>
                 <configuration>
                     <finalName>PremiumPoints-${project.version}</finalName>
                 </configuration>
@@ -80,15 +80,10 @@
         </resources>
     </build>
 
-
     <repositories>
         <repository>
-            <id>com.github.coldplugin</id>
-            <url>https://maven.pkg.github.com/Cold-Development/ColdDev</url>
-        </repository>
-        <repository>
-            <id>rosewood-repo</id>
-            <url>https://repo.rosewooddev.io/repository/public/</url>
+            <id>colddev-repo</id>
+            <url>https://repo.colddev.dev/</url>
         </repository>
         <repository>
             <id>spigotmc-repo</id>
@@ -116,7 +111,7 @@
         <dependency>
             <groupId>dev.padrewin</groupId>
             <artifactId>colddev</artifactId>
-            <version>1.4.1</version>
+            <version>1.4.4</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
