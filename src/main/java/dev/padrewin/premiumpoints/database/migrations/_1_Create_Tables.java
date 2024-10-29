@@ -67,7 +67,7 @@ public class _1_Create_Tables extends DataMigration {
             }
         }
 
-        // Attempt to import legacy data if it exists and we are using SQLite
+        // Attempt to import legacy data if it exists, and we are using SQLite
         // First make sure there isn't already any data in the database for some reason
         PremiumPoints plugin = PremiumPoints.getInstance();
         DataManager dataManager = plugin.getManager(DataManager.class);
