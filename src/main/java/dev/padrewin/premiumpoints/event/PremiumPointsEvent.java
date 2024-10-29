@@ -29,7 +29,7 @@ public abstract class PremiumPointsEvent extends Event implements Cancellable {
     /**
      * Constructor.
      *
-     * @param id     - Id of player.
+     * @param id     - ID of player.
      * @param change - Amount of change that will apply to their current balance.
      */
     public PremiumPointsEvent(UUID id, int change) {
