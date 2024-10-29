@@ -4,14 +4,12 @@ authors: [padrewin]
 website: 'https://github.com/padrewin/PremiumPoints'
 description: An economy and currency system based on premium points
 main: dev.padrewin.premiumpoints.PremiumPoints
-api-version: '1.20'
+api-version: '1.13'
 load: STARTUP
 softdepend: [Vault, Votifier, PlaceholderAPI, TokenManager, GamePoints, NexEngine]
 loadbefore: [mcMMO]
 folia-supported: true
-libraries:
-  - 'com.mysql:mysql-connector-j:9.0.0'
-  - 'org.xerial:sqlite-jdbc:3.46.0.0'
+
 commands:
   points:
     aliases: [p, pp, ppoints, premiumpoints, premiump]
@@ -33,8 +31,6 @@ permissions:
       premiumpoints.broadcast: true
       premiumpoints.export: true
       premiumpoints.import: true
-      premiumpoints.convert: true
-      premiumpoints.importlegacy: true
       premiumpoints.version: true
   premiumpoints.give:
     description: Gives access to the give command
@@ -74,12 +70,6 @@ permissions:
     default: op
   premiumpoints.import:
     description: Gives access to the import command
-    default: op
-  premiumpoints.convert:
-    description: Gives access to the convert command
-    default: op
-  premiumpoints.importlegacy:
-    description: Gives access to the importlegacy command
     default: op
   premiumpoints.version:
     description: Gives access to the version command
