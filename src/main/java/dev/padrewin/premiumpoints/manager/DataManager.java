@@ -374,49 +374,6 @@ public class DataManager extends AbstractDataManager implements Listener {
         });
     }
 
-    public boolean importLegacyTable(String tableName) {
-        AtomicBoolean value = new AtomicBoolean();
-        this.databaseConnector.connect(connection -> {
-            try {
-                String selectQuery = "SELECT playername, points FROM " + tableName;
-                Map<UUID, Integer> points = new HashMap<>();
-                try (Statement statement = connection.createStatement()) {
-                    ResultSet result = statement.executeQuery(selectQuery);
-                    while (result.next()) {
-                        UUID uuid = UUID.fromString(result.getString(1));
-                        int pointValue = result.getInt(2);
-                        points.put(uuid, pointValue);
-                    }
-                }
-
-                boolean isSqlite = this.databaseConnector instanceof SQLiteConnector;
-                String insertQuery;
-                if (isSqlite) {
-                    insertQuery = "REPLACE INTO " + this.getPointsTableName() + " (" + this.getUuidColumnName() + ", points) VALUES (?, ?)";
-                } else {
-                    insertQuery = "INSERT INTO " + this.getPointsTableName() + " (" + this.getUuidColumnName() + ", points) VALUES (?, ?) ON DUPLICATE KEY UPDATE points = ?";
-                }
-
-                try (PreparedStatement statement = connection.prepareStatement(insertQuery)) {
-                    for (Map.Entry<UUID, Integer> entry : points.entrySet()) {
-                        statement.setString(1, entry.getKey().toString());
-                        statement.setInt(2, entry.getValue());
-                        if (!isSqlite)
-                            statement.setInt(3, entry.getValue());
-                        statement.addBatch();
-                    }
-                    statement.executeBatch();
-                }
-
-                value.set(true);
-            } catch (Exception e) {
-                value.set(false);
-                e.printStackTrace();
-            }
-        });
-        return value.get();
-    }
-
     public void updateCachedUsernames(Map<UUID, String> cachedUsernames) {
         this.databaseConnector.connect(connection -> {
             String query;
@@ -476,19 +433,11 @@ public class DataManager extends AbstractDataManager implements Listener {
     }
 
     private String getPointsTableName() {
-        if (dev.padrewin.premiumpoints.setting.SettingKey.LEGACY_DATABASE_MODE.get()) {
-            return dev.padrewin.premiumpoints.setting.SettingKey.LEGACY_DATABASE_NAME.get();
-        } else {
-            return super.getTablePrefix() + "points";
-        }
+        return super.getTablePrefix() + "points";
     }
 
     private String getUuidColumnName() {
-        if (dev.padrewin.premiumpoints.setting.SettingKey.LEGACY_DATABASE_MODE.get()) {
-            return "playername";
-        } else {
-            return "uuid";
-        }
+        return "uuid";
     }
 
     @Override

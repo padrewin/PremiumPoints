@@ -12,7 +12,7 @@ import org.bukkit.plugin.messaging.PluginMessageListener;
 public class PointsMessageListener implements PluginMessageListener {
 
     public static final String CHANNEL = "BungeeCord";
-    public static final String REFRESH_SUBCHANNEL = "playerpoints:refresh";
+    public static final String REFRESH_SUBCHANNEL = "premiumpoints:refresh";
     private final DataManager dataManager;
 
     public PointsMessageListener(ColdPlugin coldPlugin) {
