@@ -22,13 +22,11 @@ public class CommandManager extends Manager {
             }
         },
         BROADCAST,
-        CONVERT,
         EXPORT,
         GIVEALL,
         GIVE,
         HELP,
         IMPORT,
-        IMPORTLEGACY,
         LEAD,
         LOOK,
         ME,
